@@ -2,202 +2,566 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>من نحن - شركة تنظيف</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <style>
         :root {
             --primary: #2A5C82;
             --secondary: #FFC857;
             --dark: #1A2E40;
             --light: #F8F9FA;
+            --white: #FFFFFF;
         }
 
-        .about-page {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: var(--light);
+            overflow-x: hidden;
+            text-align: right;
         }
 
+        /* تحسينات الأداء للجوال */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* تحسينات القسم الرئيسي */
         .about-section {
-            padding: 6rem 0;
+            padding: 2.5rem 1rem;
         }
 
         .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .about-image {
-            border-radius: 1.5rem;
+            border-radius: 1rem;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .about-image img {
             width: 100%;
-            height: 500px;
+            height: auto;
+            min-height: 250px;
             object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
         }
 
         .about-content {
-            padding: 2rem;
+            padding: 0.5rem;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: var(--dark);
-            margin-bottom: 1.5rem;
-            position: relative;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 80px;
+            width: 60px;
             height: 4px;
             background: var(--secondary);
-            margin: 1rem 0;
+            margin: 0.8rem 0;
         }
 
         .highlight-text {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--primary);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
+            display: inline-block;
         }
 
+        .description {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 1.8rem;
+            line-height: 1.7;
+        }
+
+        /* تحسينات مزايا الشركة للجوال */
         .advantages {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2.5rem 0;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
         .advantage-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 1rem;
+            background: var(--white);
+            padding: 1.2rem;
+            border-radius: 0.8rem;
             text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid #eee;
-        }
-
-        .advantage-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            border-color: var(--primary);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
         }
 
         .advantage-item i {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 1rem;
-            display: block;
+            margin-bottom: 0.8rem;
         }
 
+        .advantage-item span {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* تحسينات زر CTA للجوال */
         .cta-button {
             background: linear-gradient(45deg, var(--primary), var(--dark));
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             border-radius: 50px;
             display: inline-flex;
             align-items: center;
-            gap: 0.8rem;
-            transition: all 0.3s ease;
+            justify-content: center;
+            gap: 0.6rem;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border: none;
+            box-shadow: 0 4px 10px rgba(42, 92, 130, 0.2);
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(42, 92, 130, 0.3);
+        .cta-button i {
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+        /* قسم الإحصائيات للجوال */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            padding: 2.5rem 1rem;
+            color: white;
+            margin: 2.5rem 0;
+        }
 
-            .about-image {
-                order: 2;
-            }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            text-align: center;
+        }
 
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-number span {
+            font-size: 1.2rem;
+            margin-right: 3px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* قسم فريق العمل للجوال */
+        .team-section {
+            padding: 2.5rem 1rem;
+            background-color: var(--white);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .member-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .member-info {
+            padding: 1.5rem 1rem;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .member-position {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .member-bio {
+            color: #666;
+            margin-bottom: 1.2rem;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .social-links a {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        /* قسم العملاء للجوال */
+        .clients-section {
+            padding: 2.5rem 1rem;
+            background-color: var(--light);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .client-logo {
+            padding: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 0.5rem;
+            height: 80px;
+        }
+
+        .client-logo img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        /* تحسينات للشاشات الصغيرة جدًا */
+        @media (max-width: 400px) {
             .section-title {
-                font-size: 2rem;
+                font-size: 1.6rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .clients-grid {
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 576px) {
+        /* تحسينات للشاشات المتوسطة (أكبر من 576px) */
+        @media (min-width: 576px) {
             .about-section {
-                padding: 3rem 0;
+                padding: 3rem 1.5rem;
             }
-
+            
             .advantages {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
+            
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* تحسينات للتابلت (أكبر من 768px) */
+        @media (min-width: 768px) {
+            .about-section {
+                padding: 4rem 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* تأثيرات الحركة الخفيفة للجوال */
+        @media (prefers-reduced-motion: no-preference) {
+            [data-aos] {
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+            
+            [data-aos="fade-up"] {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            
+            [data-aos="fade-up"].aos-animate {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* تحسينات اللمس */
+        button, a {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        .advantage-item:active {
+            transform: scale(0.98);
         }
     </style>
 </head>
 <body class="about-page">
-    <!-- الهيدر هنا -->
+    <!-- هيدر خفيف للجوال -->
+    <header style="background: var(--primary); color: white; padding: 1rem; position: sticky; top: 0; z-index: 100;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 700; font-size: 1.2rem;">شركة النظافة</div>
+            <button id="menuBtn" style="background: none; border: none; color: white; font-size: 1.5rem;">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-    <main class="container">
+    <main>
         <section class="about-section">
-            <div class="container">
-                <div class="about-grid">
-                    <!-- الصورة -->
-                    <div class="about-image" data-aos="zoom-in">
-                        <img src="assets/images/about-team.jpg" alt="فريق العمل">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-up">
+                    <img src="assets/images/about-team-mobile.jpg" alt="فريق العمل في شركة النظافة" loading="lazy">
+                </div>
+
+                <div class="about-content">
+                    <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">من نحن؟</h1>
+                    <p class="highlight-text" data-aos="fade-up" data-aos-delay="150">خبرة 10+ سنوات في التنظيف المحترف</p>
+                    <p class="description" data-aos="fade-up" data-aos-delay="200">نحن فريق من المحترفين المدربين على أحدث تقنيات التنظيف، نقدم خدماتنا بأعلى معايير الجودة باستخدام تقنيات مبتكرة ومواد صديقة للبيئة.</p>
+                    
+                    <div class="advantages">
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="250">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ضمان الجودة</span>
+                        </div>
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-clock"></i>
+                            <span>خدمة 24/7</span>
+                        </div>
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="350">
+                            <i class="fas fa-award"></i>
+                            <span>شهادات معتمدة</span>
+                        </div>
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fas fa-leaf"></i>
+                            <span>مواد صديقة للبيئة</span>
+                        </div>
                     </div>
 
-                    <!-- المحتوى -->
-                    <div class="about-content" data-aos="fade-left">
-                        <h2 class="section-title">من نحن؟</h2>
-                        <p class="highlight-text">خبرة 10+ سنوات في تقديم حلول التنظيف الذكية</p>
-                        <p class="description">نحن فريق من المحترفين المدربين على أحدث تقنيات التنظيف، نؤمن بأن النظافة جزء أساسي من جودة الحياة. نقدم خدماتنا بأعلى معايير الجودة باستخدام تقنيات مبتكرة ومواد صديقة للبيئة.</p>
-                        
-                        <!-- مزايا الشركة -->
-                        <div class="advantages">
-                            <div class="advantage-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>ضمان الجودة 100%</span>
-                            </div>
-                            <div class="advantage-item">
-                                <i class="fas fa-clock"></i>
-                                <span>خدمة 24/7</span>
-                            </div>
-                            <div class="advantage-item">
-                                <i class="fas fa-award"></i>
-                                <span>شهادات معتمدة</span>
-                            </div>
-                        </div>
-
-                        <a href="contact.html" class="cta-button">
-                            <span>تعرف علينا أكثر</span>
-                            <i class="fas fa-arrow-left"></i>
+                    <div style="margin-top: 2rem;" data-aos="fade-up" data-aos-delay="450">
+                        <a href="tel:+966123456789" class="cta-button">
+                            <span>اتصل بنا الآن</span>
+                            <i class="fas fa-phone"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="stats-section" data-aos="fade-up">
+            <h2 style="color: white; text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem;">أرقامنا تتحدث عنا</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">عميل راضي</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">سنوات خبرة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">خدمة عملاء</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">رضا عملاء</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2 class="section-title" data-aos="fade-up">فريقنا المحترف</h2>
+            <p class="description" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">فريقنا المتفاني هو سر تميزنا ورضا عملائنا</p>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image">
+                        <img src="assets/images/team1-mobile.jpg" alt="مدير العمليات" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">أحمد محمد</h3>
+                        <span class="member-position">مدير العمليات</span>
+                        <p class="member-bio">خبرة 12 سنة في إدارة فرق التنظيف المحترفة وضمان جودة الخدمات.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-image">
+                        <img src="assets/images/team2-mobile.jpg" alt="مديرة الجودة" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">سارة عبدالله</h3>
+                        <span class="member-position">مديرة الجودة</span>
+                        <p class="member-bio">متخصصة في معايير النظافة الدولية وضمان استخدام مواد آمنة.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients-section">
+            <h2 class="section-title" data-aos="fade-up">عملاؤنا</h2>
+            <p class="description" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">نفتخر بثقة العديد من الشركات والمؤسسات</p>
+            
+            <div class="clients-grid">
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/client1.png" alt="شعار عميل" loading="lazy">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="250">
+                    <img src="assets/images/client2.png" alt="شعار عميل" loading="lazy">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/client3.png" alt="شعار عميل" loading="lazy">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="350">
+                    <img src="assets/images/client4.png" alt="شعار عميل" loading="lazy">
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- الفوتر هنا -->
+    <!-- فوتر خفيف للجوال -->
+    <footer style="background: var(--dark); color: white; padding: 2rem 1rem; text-align: center;">
+        <p style="margin-bottom: 1rem;">شركة النظافة المثالية © 2023</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+            <a href="tel:+966123456789" style="color: white; text-decoration: none;"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/966123456789" style="color: white; text-decoration: none;"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:info@cleaning.com" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="font-size: 0.9rem; opacity: 0.8;">جميع الحقوق محفوظة</p>
+    </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
+        // تأثيرات الحركة الخفيفة بدون مكتبات خارجية
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('[data-aos]');
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.classList.add('aos-animate');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // تشغيل مرة أولى عند التحميل
+            
+            // زر القائمة للجوال
+            const menuBtn = document.getElementById('menuBtn');
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    alert('سيتم فتح القائمة هنا في التطبيق الفعلي');
+                });
+            }
+            
+            // تحميل متقطع للصور لتحسين الأداء
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                    }
+                });
+            }
+        });
+        
+        // تتبع النقر على زر الاتصال
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'Contact',
+                        'event_label': 'Mobile Call Button'
+                    });
+                }
+            });
         });
     </script>
 </body>
