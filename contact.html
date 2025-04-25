@@ -7,73 +7,140 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
     <style>
         :root {
             --primary: #2A5C82;
             --secondary: #FFC857;
             --dark: #1A2E40;
             --light: #F8F9FA;
+            --white: #FFFFFF;
+            --gray: #e9ecef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: var(--light);
+            min-height: 100vh;
+            text-align: right;
         }
 
         .contact-page {
-            background: var(--light);
-            min-height: 100vh;
+            padding-bottom: 3rem;
         }
 
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* تحسينات الهيدر للجوال */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* تحسينات العنوان */
         .contact-section {
-            padding: 4rem 0;
+            padding: 2rem 0;
         }
 
         .page-title {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2rem;
             color: var(--dark);
-            margin-bottom: 3rem;
+            margin: 1.5rem 0;
             position: relative;
+            font-weight: 700;
         }
 
         .page-title::after {
             content: '';
             display: block;
-            width: 80px;
+            width: 60px;
             height: 4px;
             background: var(--secondary);
             margin: 1rem auto;
+            border-radius: 2px;
         }
 
+        /* تحسينات الشبكة */
         .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
+        /* تحسينات النموذج */
         .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .form-group {
             position: relative;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
         }
 
         .form-input {
             width: 100%;
-            padding: 1rem 2.5rem;
-            border: 2px solid #eee;
-            border-radius: 0.8rem;
+            padding: 0.8rem 2.5rem 0.8rem 1rem;
+            border: 2px solid var(--gray);
+            border-radius: 0.6rem;
             font-size: 1rem;
             transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
         }
 
         .form-input:focus {
             border-color: var(--primary);
             outline: none;
+            box-shadow: 0 0 0 3px rgba(42, 92, 130, 0.2);
         }
 
         .form-icon {
@@ -89,13 +156,14 @@
             min-height: 120px;
         }
 
+        /* تحسينات زر الإرسال */
         .send-btn {
             width: 100%;
-            padding: 1.2rem;
-            font-size: 1.1rem;
+            padding: 1rem;
+            font-size: 1rem;
             background: linear-gradient(45deg, var(--primary), var(--dark));
             border: none;
-            border-radius: 0.8rem;
+            border-radius: 0.6rem;
             color: white;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -103,36 +171,39 @@
             align-items: center;
             justify-content: center;
             gap: 0.8rem;
+            font-weight: 600;
+            margin-top: 1rem;
         }
 
-        .send-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(42, 92, 130, 0.3);
+        .send-btn:active {
+            transform: scale(0.98);
         }
 
+        /* تحسينات معلومات الاتصال */
         .contact-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .info-box {
             text-align: center;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border: 2px solid #f5f5f5;
-            border-radius: 1rem;
+            padding: 1.5rem 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid var(--gray);
+            border-radius: 0.8rem;
             transition: all 0.3s ease;
         }
 
         .info-box:hover {
             border-color: var(--primary);
+            transform: translateY(-5px);
         }
 
         .info-icon__wrapper {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: rgba(42, 92, 130, 0.1);
             border-radius: 50%;
             margin: 0 auto 1rem;
@@ -142,19 +213,23 @@
         }
 
         .info-icon {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--primary);
         }
 
         .info-title {
             color: var(--dark);
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .info-link {
             color: var(--primary);
             text-decoration: none;
             transition: all 0.3s ease;
+            display: block;
+            margin: 0.5rem 0;
+            font-weight: 600;
         }
 
         .info-link:hover {
@@ -165,97 +240,282 @@
             background: var(--secondary);
             color: white;
             border: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 50px;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
-        @media (max-width: 992px) {
+        .map-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* تحسينات نافذة الخيارات */
+        .options-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 1rem;
+            width: 100%;
+            max-width: 400px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-title {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .option-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.8rem;
+            background: var(--light);
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .option-btn:active {
+            transform: scale(0.98);
+        }
+
+        .option-btn i {
+            font-size: 1.3rem;
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-btn {
+            background: rgba(37, 211, 102, 0.1);
+            color: #075E54;
+        }
+
+        .whatsapp-btn i {
+            color: #075E54;
+            background: rgba(37, 211, 102, 0.2);
+        }
+
+        .sms-btn {
+            background: rgba(0, 122, 255, 0.1);
+            color: #0062cc;
+        }
+
+        .sms-btn i {
+            color: #0062cc;
+            background: rgba(0, 122, 255, 0.2);
+        }
+
+        .email-btn {
+            background: rgba(234, 67, 53, 0.1);
+            color: #EA4335;
+        }
+
+        .email-btn i {
+            color: #EA4335;
+            background: rgba(234, 67, 53, 0.2);
+        }
+
+        .close-modal {
+            background: var(--gray);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            margin-top: 1rem;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:active {
+            transform: scale(0.98);
+        }
+
+        /* تحسينات الفوتر */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        /* تحسينات للشاشات المتوسطة */
+        @media (min-width: 768px) {
+            .page-title {
+                font-size: 2.3rem;
+                margin: 2rem 0;
+            }
+            
             .contact-grid {
-                grid-template-columns: 1fr;
-                padding: 0 1rem;
+                flex-direction: row;
+            }
+            
+            .contact-form {
+                flex: 1;
+            }
+            
+            .contact-info {
+                flex: 0 0 350px;
+            }
+        }
+
+        /* تحسينات للشاشات الكبيرة */
+        @media (min-width: 992px) {
+            .contact-section {
+                padding: 3rem 0;
             }
             
             .page-title {
-                font-size: 2.2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .contact-form,
-            .contact-info {
-                padding: 1.5rem;
+                font-size: 2.5rem;
             }
             
-            .form-input {
-                padding: 0.8rem 2rem;
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .contact-info {
+                padding: 2rem;
             }
         }
     </style>
 </head>
 <body class="contact-page">
-    <!-- الهيدر هنا -->
+    <!-- الهيدر -->
+    <header>
+        <div class="header-content">
+            <div class="logo">شركة النظافة</div>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
     <main class="container">
         <section class="contact-section">
             <h1 class="page-title" data-aos="fade-down">تواصل معنا</h1>
             
             <div class="contact-grid">
-                <form class="contact-form">
+                <form id="contactForm" class="contact-form">
                     <div class="form-group">
+                        <label for="fullName" class="form-label">الاسم الكامل</label>
                         <input 
                             type="text" 
-                            placeholder="الاسم الكامل" 
+                            id="fullName"
+                            placeholder="أدخل اسمك الكامل" 
                             required
                             class="form-input"
-                            data-aos="zoom-in"
                         >
                         <i class="fas fa-user form-icon"></i>
                     </div>
                     
                     <div class="form-group">
+                        <label for="email" class="form-label">البريد الإلكتروني</label>
                         <input 
                             type="email" 
-                            placeholder="البريد الإلكتروني" 
+                            id="email"
+                            placeholder="أدخل بريدك الإلكتروني" 
                             required
                             class="form-input"
-                            data-aos="zoom-in"
-                            data-aos-delay="50"
                         >
                         <i class="fas fa-envelope form-icon"></i>
                     </div>
                     
                     <div class="form-group">
+                        <label for="phone" class="form-label">رقم الهاتف</label>
                         <input 
                             type="tel" 
-                            placeholder="رقم الهاتف" 
+                            id="phone"
+                            placeholder="أدخل رقم هاتفك" 
                             class="form-input"
-                            data-aos="zoom-in"
-                            data-aos-delay="100"
                         >
                         <i class="fas fa-phone form-icon"></i>
                     </div>
                     
                     <div class="form-group">
+                        <label for="message" class="form-label">الرسالة</label>
                         <textarea 
+                            id="message"
                             rows="5" 
-                            placeholder="رسالتك..." 
+                            placeholder="أدخل رسالتك..." 
                             class="form-input"
-                            data-aos="zoom-in"
-                            data-aos-delay="150"
                         ></textarea>
                         <i class="fas fa-comment-dots form-icon"></i>
                     </div>
                     
                     <button 
-                        type="submit" 
-                        class="cta-button send-btn"
-                        data-aos="zoom-in"
-                        data-aos-delay="200"
+                        type="button" 
+                        id="submitBtn"
+                        class="send-btn"
                     >
                         <span class="btn-text">إرسال الرسالة</span>
                         <i class="fas fa-paper-plane btn-icon"></i>
@@ -263,50 +523,48 @@
                 </form>
 
                 <div class="contact-info">
-                    <div 
-                        class="info-box" 
-                        data-aos="fade-up"
-                        data-aos-delay="50"
-                    >
+                    <div class="info-box">
                         <div class="info-icon__wrapper">
                             <i class="fas fa-phone info-icon"></i>
                         </div>
                         <h4 class="info-title">اتصل بنا</h4>
-                        <a href="tel:+31123456789" class="info-link hover-effect">
-                            +31 123 456 789
+                        <a href="tel:+31683822221" class="info-link">
+                            +31683822221
                         </a>
                     </div>
                     
-                    <div 
-                        class="info-box" 
-                        data-aos="fade-up"
-                        data-aos-delay="100"
-                    >
+                    <div class="info-box">
                         <div class="info-icon__wrapper">
                             <i class="fab fa-whatsapp info-icon"></i>
                         </div>
                         <h4 class="info-title">واتساب</h4>
                         <a 
-                            href="https://wa.me/31123456789" 
-                            class="info-link hover-effect"
+                            href="https://wa.me/31683822221" 
+                            class="info-link"
                             target="_blank"
                         >
-                            +31 987 654 321
+                            +31683822221
                         </a>
                     </div>
                     
-                    <div 
-                        class="info-box" 
-                        data-aos="fade-up"
-                        data-aos-delay="150"
-                    >
+                    <div class="info-box">
+                        <div class="info-icon__wrapper">
+                            <i class="fas fa-envelope info-icon"></i>
+                        </div>
+                        <h4 class="info-title">البريد الإلكتروني</h4>
+                        <a href="mailto:info@cleaning.com" class="info-link">
+                            info@cleaning.com
+                        </a>
+                    </div>
+                    
+                    <div class="info-box">
                         <div class="info-icon__wrapper">
                             <i class="fas fa-map-marker-alt info-icon"></i>
                         </div>
                         <h4 class="info-title">العنوان</h4>
                         <p class="info-text">
-                            أمستردام، هولندا
-                            <button class="map-btn hover-effect" data-map-trigger>
+                            الرياض، المملكة العربية السعودية
+                            <button class="map-btn">
                                 <i class="fas fa-map"></i>
                                 عرض الخريطة
                             </button>
@@ -317,13 +575,161 @@
         </section>
     </main>
 
-    <!-- الفوتر هنا -->
+    <!-- نافذة خيارات الإرسال -->
+    <div id="optionsModal" class="options-modal">
+        <div class="modal-content">
+            <h3 class="modal-title">اختر طريقة الإرسال</h3>
+            
+            <button id="whatsappBtn" class="option-btn whatsapp-btn">
+                <i class="fab fa-whatsapp"></i>
+                <span>إرسال عبر واتساب</span>
+            </button>
+            
+            <button id="smsBtn" class="option-btn sms-btn">
+                <i class="fas fa-sms"></i>
+                <span>إرسال رسالة نصية</span>
+            </button>
+            
+            <button id="emailBtn" class="option-btn email-btn">
+                <i class="fas fa-envelope"></i>
+                <span>إرسال عبر البريد</span>
+            </button>
+            
+            <button id="closeModal" class="close-modal">
+                إغلاق
+            </button>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">شركة النظافة المثالية</div>
+            
+            <div class="footer-links">
+                <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+            <p class="copyright">جميع الحقوق محفوظة &copy; 2023</p>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // تهيئة تأثيرات الحركة
         AOS.init({
-            duration: 800,
+            duration: 600,
             once: true
+        });
+        
+        // متغيرات النموذج
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const optionsModal = document.getElementById('optionsModal');
+        const closeModal = document.getElementById('closeModal');
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const smsBtn = document.getElementById('smsBtn');
+        const emailBtn = document.getElementById('emailBtn');
+        
+        // فتح نافذة الخيارات عند النقر على إرسال
+        submitBtn.addEventListener('click', function() {
+            // التحقق من صحة النموذج
+            if (contactForm.checkValidity()) {
+                optionsModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            } else {
+                // إذا كان النموذج غير صالح، عرض رسالة خطأ
+                alert('الرجاء ملء جميع الحقول المطلوبة');
+                contactForm.reportValidity();
+            }
+        });
+        
+        // إغلاق النافذة
+        closeModal.addEventListener('click', function() {
+            optionsModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // إرسال عبر واتساب
+        whatsappBtn.addEventListener('click', function() {
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `
+                *رسالة جديدة من موقع شركة النظافة*
+                
+                *الاسم:* ${name}
+                *البريد الإلكتروني:* ${email}
+                *رقم الهاتف:* ${phone}
+                *الرسالة:*
+                ${message}
+            `;
+            
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            window.open(`https://wa.me/31683822221?text=${encodedMessage}`, '_blank');
+            
+            optionsModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            contactForm.reset();
+        });
+        
+        // إرسال رسالة نصية
+        smsBtn.addEventListener('click', function() {
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            const smsBody = `
+                رسالة جديدة من ${name}
+                ${message}
+                للرد: ${phone}
+            `;
+            
+            window.open(`sms:+31683822221?body=${encodeURIComponent(smsBody)}`, '_blank');
+            
+            optionsModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            contactForm.reset();
+        });
+        
+        // إرسال عبر البريد الإلكتروني
+        emailBtn.addEventListener('click', function() {
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            const subject = `رسالة جديدة من ${name} - موقع شركة النظافة`;
+            const emailBody = `
+                اسم العميل: ${name}
+                البريد الإلكتروني: ${email}
+                رقم الهاتف: ${phone}
+                
+                الرسالة:
+                ${message}
+                
+                ---
+                هذه الرسالة مرسلة من نموذج الاتصال في موقع شركة النظافة
+            `;
+            
+            window.open(`mailto:2025ooss@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`);
+            
+            optionsModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            contactForm.reset();
+        });
+        
+        // إغلاق النافذة عند النقر خارجها
+        window.addEventListener('click', function(event) {
+            if (event.target === optionsModal) {
+                optionsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
