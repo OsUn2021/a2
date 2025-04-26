@@ -3,90 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حجز الخدمات - شركة تنظيف محترفة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>حجز الخدمات - شركة النظافة المثالية | تنظيف محترف للمؤسسات</title>
+    <meta name="description" content="احجز خدمات تنظيف محترفة للمدارس، الفنادق، المطاعم والمؤسسات. فريق مدرب بأحدث المعدات ومواد التنظيف المعتمدة.">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
             --primary: #2A5C82;
+            --primary-dark: #1D3F5C;
             --secondary: #FFC857;
+            --secondary-dark: #E6B44C;
             --accent: #E63946;
-            --text: #333;
+            --accent-dark: #C1121F;
+            --text: #333333;
+            --text-light: #555;
             --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             font-family: 'Cairo', sans-serif;
             background: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
         }
 
-        .booking-section {
-            padding: 3rem 1rem;
+        .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* تحسين صناديق الخدمات */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+        /* تحسينات القسم الرئيسي */
+        .booking-section {
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .service-card {
-            background: white;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 2px solid transparent;
+        .booking-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(42, 92, 130, 0.03) 0%, rgba(255, 200, 87, 0.03) 100%);
+            z-index: -1;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            border-color: var(--secondary);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .service-title {
-            color: var(--primary);
-            margin: 1rem 0;
-            font-size: 1.3rem;
-        }
-
-        .service-description {
-            color: var(--text);
-            font-size: 0.95rem;
-            min-height: 60px;
-            margin-bottom: 1rem;
-        }
-
-        .service-price {
-            background: var(--secondary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            display: inline-block;
-            font-weight: bold;
-        }
-
-        /* تحسينات إضافية */
+        /* تحسين العناوين */
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
             position: relative;
             display: inline-block;
         }
@@ -94,116 +82,453 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 50%;
-            height: 3px;
-            background: var(--secondary);
-            margin: 0.5rem auto;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            margin: 1rem auto;
+            border-radius: 2px;
         }
 
-        /* عناصر جديدة مضافة */
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* تحسين كروت الخدمات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: var(--transition);
+        }
+
+        .service-card:hover::after {
+            height: 6px;
+        }
+
         .service-badge {
             position: absolute;
-            top: -10px;
-            right: -10px;
+            top: 20px;
+            left: -30px;
             background: var(--accent);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 1rem;
-            font-size: 0.8rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            color: var(--white);
+            padding: 0.5rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transform: rotate(-45deg);
+            box-shadow: 0 2px 8px rgba(230, 57, 70, 0.3);
+            width: 120px;
+            text-align: center;
         }
 
-        .service-duration {
+        .service-icon {
+            font-size: 3rem;
             color: var(--primary);
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            color: var(--accent);
+        }
+
+        .service-title {
+            color: var(--primary);
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .service-description {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            min-height: 60px;
         }
 
         .service-features {
             list-style: none;
             padding: 0;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             text-align: right;
         }
 
         .service-features li {
-            padding: 0.3rem 0;
-            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            position: relative;
+            padding-right: 1.5rem;
         }
 
         .service-features li::before {
-            content: "✓";
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
             color: var(--secondary);
-            margin-left: 0.5rem;
+            position: absolute;
+            right: 0;
+        }
+
+        .service-price {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(42, 92, 130, 0.2);
+        }
+
+        .service-duration {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .service-duration i {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--text);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(255, 200, 87, 0.3);
+        }
+
+        .btn:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 200, 87, 0.4);
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        /* تأثيرات الحركة */
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* قسم ضمان الجودة */
+        .quality-guarantee {
+            background: var(--primary);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin-top: 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quality-guarantee::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .quality-guarantee::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .quality-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quality-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quality-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .quality-item i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .quality-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quality-item p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        /* التكيف مع الأجهزة المختلفة */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
         }
 
         @media (max-width: 768px) {
+            .booking-section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .quality-guarantee {
+                padding: 2rem 1rem;
+            }
+            
+            .quality-items {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+            
+            .quality-item {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
             .services-grid {
                 grid-template-columns: 1fr;
             }
             
             .section-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <section class="booking-section">
-        <div class="section-header">
-            <h2 class="section-title">اختر خدمة التنظيف</h2>
-        </div>
-
-        <div class="services-grid">
-            <!-- تنظيف المدارس -->
-            <div class="service-card">
-                <span class="service-badge">الأكثر طلبًا</span>
-                <i class="fas fa-school service-icon"></i>
-                <h3 class="service-title">تنظيف المدارس</h3>
-                <p class="service-description">
-                    تنظيف وتعقيم شامل للفصول الدراسية، الممرات، والمرافق الصحية
-                </p>
-                <ul class="service-features">
-                    <li>تعقيم الأسطح</li>
-                    <li>إزالة الكتابات</li>
-                    <li>تنظيف الساحات</li>
-                </ul>
-                <div class="service-price">300 ر.س</div>
-                <div class="service-duration">مدة الخدمة: 4-6 ساعات</div>
+        <div class="container">
+            <div class="section-header animate__animated animate__fadeIn">
+                <h1 class="section-title">خدمات التنظيف الاحترافية</h1>
+                <p class="section-subtitle">نقدم حلول تنظيف متكاملة للمؤسسات بمعايير الجودة العالمية، باستخدام أحدث التقنيات وفريق مدرب على أعلى مستوى</p>
             </div>
 
-            <!-- تنظيف الفنادق -->
-            <div class="service-card">
-                <i class="fas fa-hotel service-icon"></i>
-                <h3 class="service-title">تنظيف الفنادق</h3>
-                <p class="service-description">
-                    خدمات تنظيف متكاملة لغرف النزلاء والمناطق العامة
-                </p>
-                <ul class="service-features">
-                    <li>تنظيف المفروشات</li>
-                    <li>تعقيم الحمامات</li>
-                    <li>تلميع الأرضيات</li>
-                </ul>
-                <div class="service-price">500 ر.س</div>
-                <div class="service-duration">مدة الخدمة: 6-8 ساعات</div>
+            <div class="services-grid">
+                <!-- تنظيف المدارس -->
+                <div class="service-card animate__animated animate__fadeInUp animate-delay-1">
+                    <span class="service-badge">الأكثر طلبًا</span>
+                    <i class="fas fa-school service-icon"></i>
+                    <h3 class="service-title">تنظيف المدارس</h3>
+                    <p class="service-description">
+                        حلول تنظيف متكاملة للمدارس تشمل الفصول، المختبرات، الممرات والمرافق الصحية مع مواد تعقيم معتمدة
+                    </p>
+                    <ul class="service-features">
+                        <li>تعقيم الأسطح والطاولات يومياً</li>
+                        <li>إزالة الكتابات والملصقات</li>
+                        <li>تنظيف الساحات الخارجية</li>
+                        <li>معالجة الأرضيات وتلميعها</li>
+                        <li>التخلص الآمن من النفايات</li>
+                    </ul>
+                    <div class="service-price">300 ر.س</div>
+                    <div class="service-duration">
+                        <i class="far fa-clock"></i> مدة الخدمة: 4-6 ساعات
+                    </div>
+                    <a href="booking.html" class="btn btn-block">احجز الآن</a>
+                </div>
+
+                <!-- تنظيف الفنادق -->
+                <div class="service-card animate__animated animate__fadeInUp animate-delay-2">
+                    <i class="fas fa-hotel service-icon"></i>
+                    <h3 class="service-title">تنظيف الفنادق</h3>
+                    <p class="service-description">
+                        خدمات تنظيف فندقية شاملة لغرف النزلاء، المطاعم، الصالات والمناطق العامة وفق معايير الضيافة العالمية
+                    </p>
+                    <ul class="service-features">
+                        <li>تنظيف وتلميع المفروشات</li>
+                        <li>تعقيم الحمامات بشكل يومي</li>
+                        <li>تلميع الأرضيات والمرايا</li>
+                        <li>تنظيف المطابخ الفندقية</li>
+                        <li>الاهتمام بالتفاصيل الدقيقة</li>
+                    </ul>
+                    <div class="service-price">500 ر.س</div>
+                    <div class="service-duration">
+                        <i class="far fa-clock"></i> مدة الخدمة: 6-8 ساعات
+                    </div>
+                    <a href="booking.html" class="btn btn-block">احجز الآن</a>
+                </div>
+
+                <!-- تنظيف المطاعم -->
+                <div class="service-card animate__animated animate__fadeInUp animate-delay-3">
+                    <i class="fas fa-utensils service-icon"></i>
+                    <h3 class="service-title">تنظيف المطاعم</h3>
+                    <p class="service-description">
+                        حلول تنظيف متخصصة للمطاعم تشمل المطابخ، مناطق التحضير، قاعات الطعام وفق أعلى معايير النظافة الصحية
+                    </p>
+                    <ul class="service-features">
+                        <li>إزالة الدهون والشحوم</li>
+                        <li>تعقيم أسطح التحضير</li>
+                        <li>تنظيف الثلاجات والمجمدات</li>
+                        <li>تطهير أنظمة التهوية</li>
+                        <li>تنظيف خزانات التخزين</li>
+                    </ul>
+                    <div class="service-price">400 ر.س</div>
+                    <div class="service-duration">
+                        <i class="far fa-clock"></i> مدة الخدمة: 5-7 ساعات
+                    </div>
+                    
+                </div>
             </div>
 
-            <!-- تنظيف المطاعم -->
-            <div class="service-card">
-                <i class="fas fa-utensils service-icon"></i>
-                <h3 class="service-title">تنظيف المطاعم</h3>
-                <p class="service-description">
-                    تنظيف عميق للمطابخ وطاولات الطعام وفق معايير الصحة العامة
-                </p>
-                <ul class="service-features">
-                    <li>إزالة الدهون</li>
-                    <li>تعقيم الأسطح</li>
-                    <li>تنظيف الثلاجات</li>
-                </ul>
-                <div class="service-price">400 ر.س</div>
-                <div class="service-duration">مدة الخدمة: 5-7 ساعات</div>
+            <!-- قسم ضمان الجودة -->
+            <div class="quality-guarantee animate__animated animate__fadeIn">
+                <h3 class="quality-title">لماذا تختار خدماتنا؟</h3>
+                <div class="quality-items">
+                    <div class="quality-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>ضمان الجودة</h4>
+                        <p>نضمن رضاكم الكامل عن خدماتنا أو استرداد المبلغ</p>
+                    </div>
+                    <div class="quality-item">
+                        <i class="fas fa-users"></i>
+                        <h4>فريق مدرب</h4>
+                        <p>فريق محترف مدرب على أحدث أساليب التنظيف</p>
+                    </div>
+                    <div class="quality-item">
+                        <i class="fas fa-leaf"></i>
+                        <h4>مواد صديقة للبيئة</h4>
+                        <p>استخدام مواد تنظيف آمنة ومعتمدة بيئياً</p>
+                    </div>
+                    <div class="quality-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>دعم فني 24/7</h4>
+                        <p>متاحون لخدمتكم على مدار الساعة</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // إضافة تأثيرات حركية عند التمرير
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate__animated');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(entry.target.dataset.animate);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // تأثيرات عند الضغط على الأزرار
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.classList.add('animate__pulse');
+                    setTimeout(() => {
+                        this.classList.remove('animate__pulse');
+                    }, 1000);
+                    
+                    // هنا يمكنك إضافة وظيفة الحجز الفعلية
+                    alert('شكراً لاختياركم خدمتنا! سيتم توجيهك إلى صفحة الحجز.');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
