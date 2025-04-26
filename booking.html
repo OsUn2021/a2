@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حجز الخدمات - شركة تنظيف محترفة</title>
-    <meta name="description" content="احجز خدمات التنظيف الاحترافية لمنزلك، مدرستك، فندقك أو مطعمك مع ضمان الجودة والتميز في الخدمة">
-    <meta name="keywords" content="تنظيف مدارس, تنظيف فنادق, تنظيف مطاعم, شركة تنظيف محترفة, تنظيف منازل, تعقيم, خدمات تنظيف">
+    <title>Book Services - Professional Cleaning Company</title>
+    <meta name="description" content="Book professional cleaning services for your home, school, hotel or restaurant with quality guarantee and excellent service">
+    <meta name="keywords" content="school cleaning, hotel cleaning, restaurant cleaning, professional cleaning company, home cleaning, disinfection, cleaning services">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        emailjs.init('user_8ZP3z7L5bR75Jj5J75Jj5'); // تهيئة EmailJS
+        emailjs.init('user_8ZP3z7L5bR75Jj5J75Jj5'); // Initialize EmailJS
     </script>
     <style>
         :root {
@@ -270,7 +270,7 @@
             color: var(--accent);
         }
 
-        /* ألوان البطاقات حسب الخدمة */
+        /* Card colors by service */
         .service-card:nth-child(1)::before { background: #2A5C82; }
         .service-card:nth-child(2)::before { background: #4CAF50; }
         .service-card:nth-child(3)::before { background: #9C27B0; }
@@ -281,7 +281,7 @@
         .service-card:nth-child(3):hover::before { background: #ab47bc; }
         .service-card:nth-child(4):hover::before { background: #ff7043; }
 
-        /* تقويم الحجز */
+        /* Booking calendar */
         .calendar-container {
             max-width: 800px;
             margin: 0 auto;
@@ -396,7 +396,7 @@
             background: white;
         }
 
-        /* أوقات الحجز */
+        /* Booking times */
         .time-slots-container {
             margin-top: 2rem;
         }
@@ -442,7 +442,7 @@
             text-decoration: line-through;
         }
 
-        /* نموذج التأكيد */
+        /* Confirmation form */
         .booking-summary {
             background: rgba(42, 92, 130, 0.05);
             border-radius: var(--border-radius);
@@ -565,7 +565,7 @@
             background: rgba(42, 92, 130, 0.05);
         }
 
-        /* رسالة التأكيد */
+        /* Confirmation message */
         .confirmation-message {
             text-align: center;
             padding: 3rem;
@@ -599,14 +599,14 @@
             margin-bottom: 2rem;
         }
 
-        /* التنقل بين الخطوات */
+        /* Step navigation */
         .step-navigation {
             display: flex;
             justify-content: space-between;
             margin-top: 2rem;
         }
 
-        /* التأثيرات والتحسينات */
+        /* Effects and improvements */
         .progress-bar {
             height: 6px;
             background: #e0e0e0;
@@ -622,7 +622,7 @@
             transition: width 0.5s ease;
         }
 
-        /* التأثيرات عند التحميل */
+        /* Loading effects */
         @keyframes slideIn {
             from { transform: translateY(30px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
@@ -632,7 +632,7 @@
             animation: slideIn 0.6s ease forwards;
         }
 
-        /* التكيف مع الأجهزة المحمولة */
+        /* Mobile responsiveness */
         @media (max-width: 992px) {
             .section-title {
                 font-size: 2.2rem;
@@ -737,7 +737,7 @@
             }
         }
 
-        /* تأثيرات إضافية */
+        /* Additional effects */
         .pulse {
             animation: pulse 2s infinite;
         }
@@ -748,13 +748,13 @@
             100% { box-shadow: 0 0 0 0 rgba(42, 92, 130, 0); }
         }
 
-        /* تحسينات لواجهة المستخدم */
+        /* UI improvements */
         ::selection {
             background: var(--secondary);
             color: white;
         }
 
-        /* شريط التمرير */
+        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -777,91 +777,91 @@
 <body>
     <section class="booking-section">
         <div class="container">
-            <h1 class="section-title">احجز خدمتك الآن</h1>
+            <h1 class="section-title">Book Your Service Now</h1>
             
             <div class="booking-steps">
-                <!-- شريط التقدم -->
+                <!-- Progress bar -->
                 <div class="progress-bar">
                     <div class="progress" id="booking-progress"></div>
                 </div>
                 
-                <!-- مؤشر الخطوات -->
+                <!-- Steps indicator -->
                 <div class="steps-indicator">
                     <div class="step-indicator active" data-step="1">
                         <div class="step-number">1</div>
-                        <div class="step-label">اختر الخدمة</div>
+                        <div class="step-label">Choose Service</div>
                     </div>
                     <div class="step-indicator" data-step="2">
                         <div class="step-number">2</div>
-                        <div class="step-label">حدد الموعد</div>
+                        <div class="step-label">Select Date</div>
                     </div>
                     <div class="step-indicator" data-step="3">
                         <div class="step-number">3</div>
-                        <div class="step-label">تأكيد الحجز</div>
+                        <div class="step-label">Confirm Booking</div>
                     </div>
                 </div>
                 
-                <!-- الخطوة 1: اختيار الخدمة -->
+                <!-- Step 1: Choose Service -->
                 <div class="step active" data-step="1">
-                    <h3 class="step-title">اختر الخدمة المطلوبة</h3>
+                    <h3 class="step-title">Choose Your Service</h3>
                     <div class="services-grid">
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-home fa-2x"></i>
                             </div>
-                            <h4>تنظيف المنازل</h4>
-                            <p>خدمة شاملة لجميع أرجاء المنزل مع استخدام أفضل مواد التنظيف والتعقيم</p>
-                            <div class="service-price">150 ر.س</div>
+                            <h4>Home Cleaning</h4>
+                            <p>Comprehensive service for all areas of the home using the best cleaning and disinfection materials</p>
+                            <div class="service-price">50 USA</div>
                         </div>
 
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-school fa-2x"></i>
                             </div>
-                            <h4>تنظيف المدارس</h4>
-                            <p>تنظيف وتعقيم الفصول والمرافق المدرسية بمعايير صحية عالية</p>
-                            <div class="service-price">300 ر.س</div>
+                            <h4>School Cleaning</h4>
+                            <p>Cleaning and disinfecting classrooms and school facilities with high health standards</p>
+                            <div class="service-price">100 USA</div>
                         </div>
 
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-hotel fa-2x"></i>
                             </div>
-                            <h4>تنظيف الفنادق</h4>
-                            <p>خدمات تنظيف متكاملة للغرف والمناطق العامة مع ضمان الجودة</p>
-                            <div class="service-price">500 ر.س</div>
+                            <h4>Hotel Cleaning</h4>
+                            <p>Complete cleaning services for rooms and public areas with quality guarantee</p>
+                            <div class="service-price">150 USA</div>
                         </div>
 
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-utensils fa-2x"></i>
                             </div>
-                            <h4>تنظيف المطاعم</h4>
-                            <p>تنظيف المطابخ والطاولات بمعايير صحية عالية وتلميع المعدات</p>
-                            <div class="service-price">400 ر.س</div>
+                            <h4>Restaurant Cleaning</h4>
+                            <p>Cleaning kitchens and tables with high health standards and equipment polishing</p>
+                            <div class="service-price">400 SAR</div>
                         </div>
                     </div>
                     
                     <div class="step-navigation">
                         <button class="btn btn-outline" disabled>
-                            <i class="fas fa-arrow-left"></i> السابق
+                            <i class="fas fa-arrow-left"></i> Previous
                         </button>
                         <button class="btn btn-primary next-step" data-next="2">
-                            التالي <i class="fas fa-arrow-right"></i>
+                            Next <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
                 
-                <!-- الخطوة 2: تحديد الموعد -->
+                <!-- Step 2: Select Date -->
                 <div class="step" data-step="2">
-                    <h3 class="step-title">حدد الموعد المناسب</h3>
+                    <h3 class="step-title">Select Suitable Date</h3>
                     <div class="calendar-container">
                         <div class="calendar-header">
                             <div class="month-nav">
                                 <button class="nav-button prev-month">
                                     <i class="fas fa-chevron-right"></i>
                                 </button>
-                                <h4 class="current-month">أغسطس 2023</h4>
+                                <h4 class="current-month">August 2023</h4>
                                 <button class="nav-button next-month">
                                     <i class="fas fa-chevron-left"></i>
                                 </button>
@@ -869,66 +869,66 @@
                         </div>
                         
                         <div class="calendar-grid" id="weekdays">
-                            <div class="calendar-weekday">الأحد</div>
-                            <div class="calendar-weekday">الاثنين</div>
-                            <div class="calendar-weekday">الثلاثاء</div>
-                            <div class="calendar-weekday">الأربعاء</div>
-                            <div class="calendar-weekday">الخميس</div>
-                            <div class="calendar-weekday">الجمعة</div>
-                            <div class="calendar-weekday">السبت</div>
+                            <div class="calendar-weekday">Sunday</div>
+                            <div class="calendar-weekday">Monday</div>
+                            <div class="calendar-weekday">Tuesday</div>
+                            <div class="calendar-weekday">Wednesday</div>
+                            <div class="calendar-weekday">Thursday</div>
+                            <div class="calendar-weekday">Friday</div>
+                            <div class="calendar-weekday">Saturday</div>
                         </div>
                         
                         <div class="calendar-grid" id="calendar-days"></div>
                         
                         <div class="time-slots-container">
-                            <h4 class="time-slots-title">اختر الوقت المناسب</h4>
+                            <h4 class="time-slots-title">Choose Suitable Time</h4>
                             <div class="time-slots" id="time-slots">
-                                <div class="time-slot">8:00 صباحاً</div>
-                                <div class="time-slot">10:00 صباحاً</div>
-                                <div class="time-slot">12:00 ظهراً</div>
-                                <div class="time-slot">2:00 ظهراً</div>
-                                <div class="time-slot">4:00 عصراً</div>
-                                <div class="time-slot">6:00 مساءً</div>
+                                <div class="time-slot">8:00 AM</div>
+                                <div class="time-slot">10:00 AM</div>
+                                <div class="time-slot">12:00 PM</div>
+                                <div class="time-slot">2:00 PM</div>
+                                <div class="time-slot">4:00 PM</div>
+                                <div class="time-slot">6:00 PM</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="step-navigation">
                         <button class="btn btn-outline prev-step" data-prev="1">
-                            <i class="fas fa-arrow-left"></i> السابق
+                            <i class="fas fa-arrow-left"></i> Previous
                         </button>
                         <button class="btn btn-primary next-step" data-next="3">
-                            التالي <i class="fas fa-arrow-right"></i>
+                            Next <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
                 
-                <!-- الخطوة 3: تأكيد الحجز -->
+                <!-- Step 3: Confirm Booking -->
                 <div class="step" data-step="3">
-                    <h3 class="step-title">تأكيد الحجز</h3>
+                    <h3 class="step-title">Confirm Booking</h3>
                     <div class="booking-summary">
                         <h4 class="summary-title">
-                            <i class="fas fa-clipboard-check"></i> ملخص الحجز
+                            <i class="fas fa-clipboard-check"></i> Booking Summary
                         </h4>
                         <div class="summary-details">
                             <div>
                                 <div class="summary-item">
-                                    <strong>الخدمة:</strong>
-                                    <span id="summary-service">تنظيف المنازل</span>
+                                    <strong>Service:</strong>
+                                    <span id="summary-service">Home Cleaning</span>
                                 </div>
                                 <div class="summary-item">
-                                    <strong>السعر:</strong>
-                                    <span id="summary-price">150 ر.س</span>
+                                    <strong>Price:</strong>
+                                    <span id="summary-price">150 SAR</span>
                                 </div>
                             </div>
                             <div>
                                 <div class="summary-item">
-                                    <strong>التاريخ:</strong>
-                                    <span id="summary-date">15 أغسطس 2023</span>
+                                    <strong>Date:</strong>
+                                    <span id="summary-date">August 15, 2023</span>
                                 </div>
                                 <div class="summary-item">
-                                    <strong>الوقت:</strong>
-                                    <span id="summary-time">10:00 صباحاً</span>
+                                    <strong>Time:</strong>
+                                    <span id="summary-time">10:00 AM</span>
                                 </div>
                             </div>
                         </div>
@@ -936,47 +936,47 @@
                     
                     <form class="confirm-form" id="booking-form">
                         <div class="form-group">
-                            <label for="full-name">الاسم الكامل</label>
-                            <input type="text" id="full-name" class="form-control" placeholder="أدخل اسمك الكامل" required>
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" class="form-control" placeholder="Enter your full name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">رقم الهاتف</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="أدخل رقم هاتفك" required>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
                         </div>
                         <div class="form-group">
-                            <label for="address">موقعك (المدينة/الحي)</label>
-                            <input type="text" id="address" class="form-control" placeholder="أدخل موقعك (مثال: هولنداء - حي .....)" required>
+                            <label for="address">Your Location (City/District)</label>
+                            <input type="text" id="address" class="form-control" placeholder="Enter your location (e.g.: Riyadh - District .....)" required>
                         </div>
                         <div class="form-group">
-                            <label for="notes">ملاحظات إضافية (اختياري)</label>
-                            <textarea id="notes" class="form-control" rows="3" placeholder="أي ملاحظات أو تعليمات خاصة"></textarea>
+                            <label for="notes">Additional Notes (Optional)</label>
+                            <textarea id="notes" class="form-control" rows="3" placeholder="Any special notes or instructions"></textarea>
                         </div>
                         
                         <div class="form-actions">
                             <button type="button" class="btn btn-outline prev-step" data-prev="2">
-                                <i class="fas fa-arrow-left"></i> السابق
+                                <i class="fas fa-arrow-left"></i> Previous
                             </button>
                             <button type="submit" class="btn btn-secondary">
-                                <i class="fas fa-check"></i> تأكيد الحجز
+                                <i class="fas fa-check"></i> Confirm Booking
                             </button>
                         </div>
                     </form>
                 </div>
                 
-                <!-- رسالة التأكيد -->
+                <!-- Confirmation Message -->
                 <div class="step" data-step="4" style="display: none;">
                     <div class="confirmation-message">
                         <div class="confirmation-icon">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h3 class="confirmation-title">تم تأكيد حجزك بنجاح!</h3>
+                        <h3 class="confirmation-title">Your Booking is Confirmed!</h3>
                         <p class="confirmation-text">
-                            شكراً لك على ثقتك بنا. تم استلام طلب حجز الخدمة وسنتواصل معك قريباً لتأكيد التفاصيل.
+                            Thank you for trusting us. We have received your service booking request and will contact you soon to confirm the details.
                             <br>
-                            رقم الحجز: <strong id="booking-number">#2023-4859</strong>
+                            Booking Number: <strong id="booking-number">#2023-4859</strong>
                         </p>
                         <button class="btn btn-primary" id="new-booking">
-                            <i class="fas fa-plus"></i> حجز جديد
+                            <i class="fas fa-plus"></i> New Booking
                         </button>
                     </div>
                 </div>
@@ -986,7 +986,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // متغيرات الحجز
+            // Booking variables
             let bookingData = {
                 service: null,
                 date: null,
@@ -999,12 +999,12 @@
                 }
             };
             
-            // تهيئة التقويم
+            // Calendar initialization
             const today = new Date();
             let currentMonth = today.getMonth();
             let currentYear = today.getFullYear();
             
-            // عناصر الواجهة
+            // UI elements
             const steps = document.querySelectorAll('.step');
             const stepIndicators = document.querySelectorAll('.step-indicator');
             const nextButtons = document.querySelectorAll('.next-step');
@@ -1019,33 +1019,33 @@
             const bookingForm = document.getElementById('booking-form');
             const newBookingBtn = document.getElementById('new-booking');
             
-            // أسماء الأشهر والأيام
-            const monthNames = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", 
-                               "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+            // Month and day names
+            const monthNames = ["January", "February", "March", "April", "May", "June", 
+                               "July", "August", "September", "October", "November", "December"];
             
-            const dayNames = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+            const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             
-            // إنشاء رقم حجز عشوائي
+            // Generate random booking number
             function generateBookingNumber() {
                 return '#' + Math.floor(1000 + Math.random() * 9000);
             }
             
-            // عرض التقويم
+            // Render calendar
             function renderCalendar() {
-                // تحديد أول يوم من الشهر وعدد أيام الشهر
+                // Get first day of month and days in month
                 const firstDay = new Date(currentYear, currentMonth, 1).getDay();
                 const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
                 
-                // تحديث عنوان الشهر
+                // Update month title
                 currentMonthElement.textContent = `${monthNames[currentMonth]} ${currentYear}`;
                 
-                // مسح أيام التقويم السابقة
+                // Clear previous calendar days
                 calendarDays.innerHTML = '';
                 
-                // حساب الأيام من الشهر السابق
+                // Calculate days from previous month
                 const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
                 
-                // إضافة الأيام الفارغة لبدء التقويم من اليوم الصحيح
+                // Add empty days to start calendar on correct day
                 for (let i = 0; i < firstDay; i++) {
                     const dayElement = document.createElement('div');
                     dayElement.className = 'calendar-day disabled';
@@ -1053,20 +1053,20 @@
                     calendarDays.appendChild(dayElement);
                 }
                 
-                // إضافة أيام الشهر الحالي
+                // Add current month days
                 for (let i = 1; i <= daysInMonth; i++) {
                     const dayElement = document.createElement('div');
                     dayElement.className = 'calendar-day';
                     dayElement.textContent = i;
                     
-                    // تحديد إذا كان اليوم هو اليوم الحالي
+                    // Mark if day is today
                     if (currentYear === today.getFullYear() && 
                         currentMonth === today.getMonth() && 
                         i === today.getDate()) {
                         dayElement.classList.add('today');
                     }
                     
-                    // تحديد إذا كان اليوم قد تم اختياره
+                    // Mark if day is selected
                     if (bookingData.date && 
                         bookingData.date.getDate() === i && 
                         bookingData.date.getMonth() === currentMonth && 
@@ -1074,14 +1074,14 @@
                         dayElement.classList.add('selected');
                     }
                     
-                    // تعطيل الأيام الماضية
+                    // Disable past days
                     if (currentYear === today.getFullYear() && 
                         currentMonth === today.getMonth() && 
                         i < today.getDate()) {
                         dayElement.classList.add('disabled');
                     }
                     
-                    // إضافة حدث النقر
+                    // Add click event
                     dayElement.addEventListener('click', function() {
                         if (!this.classList.contains('disabled')) {
                             document.querySelectorAll('.calendar-day').forEach(day => {
@@ -1089,7 +1089,7 @@
                             });
                             this.classList.add('selected');
                             
-                            // حفظ تاريخ الحجز
+                            // Save booking date
                             bookingData.date = new Date(currentYear, currentMonth, parseInt(this.textContent));
                             updateSummary();
                         }
@@ -1099,16 +1099,16 @@
                 }
             }
             
-            // تحديث ملخص الحجز
+            // Update booking summary
             function updateSummary() {
                 if (bookingData.service) {
                     document.getElementById('summary-service').textContent = bookingData.service.name;
-                    document.getElementById('summary-price').textContent = bookingData.service.price + ' ر.س';
+                    document.getElementById('summary-price').textContent = bookingData.service.price + ' SAR';
                 }
                 
                 if (bookingData.date) {
                     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                    document.getElementById('summary-date').textContent = bookingData.date.toLocaleDateString('ar-SA', options);
+                    document.getElementById('summary-date').textContent = bookingData.date.toLocaleDateString('en-US', options);
                 }
                 
                 if (bookingData.time) {
@@ -1116,20 +1116,20 @@
                 }
             }
             
-            // التنقل بين الخطوات
+            // Navigate between steps
             function goToStep(stepNumber) {
-                // إخفاء جميع الخطوات
+                // Hide all steps
                 steps.forEach(step => {
                     step.style.display = 'none';
                     step.classList.remove('active');
                 });
                 
-                // إظهار الخطوة المطلوبة
+                // Show target step
                 const targetStep = document.querySelector(`.step[data-step="${stepNumber}"]`);
                 targetStep.style.display = 'block';
                 targetStep.classList.add('active');
                 
-                // تحديث مؤشر الخطوات
+                // Update step indicators
                 stepIndicators.forEach(indicator => {
                     indicator.classList.remove('active', 'completed');
                     
@@ -1141,14 +1141,14 @@
                     }
                 });
                 
-                // تحديث شريط التقدم
+                // Update progress bar
                 progressBar.style.width = `${(stepNumber - 1) * 33.33}%`;
                 
-                // التمرير لأعلى الصفحة
+                // Scroll to top
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
             
-            // أحداث النقر على أزرار التالي
+            // Next button click events
             nextButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const nextStep = this.getAttribute('data-next');
@@ -1156,7 +1156,7 @@
                 });
             });
             
-            // أحداث النقر على أزرار السابق
+            // Previous button click events
             prevButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const prevStep = this.getAttribute('data-prev');
@@ -1164,13 +1164,13 @@
                 });
             });
             
-            // اختيار الخدمة
+            // Service selection
             serviceCards.forEach(card => {
                 card.addEventListener('click', function() {
                     serviceCards.forEach(c => c.classList.remove('selected'));
                     this.classList.add('selected');
                     
-                    // حفظ بيانات الخدمة
+                    // Save service data
                     const serviceName = this.querySelector('h4').textContent;
                     const servicePrice = parseInt(this.querySelector('.service-price').textContent);
                     
@@ -1183,21 +1183,21 @@
                 });
             });
             
-            // اختيار الوقت
+            // Time selection
             timeSlots.forEach(slot => {
                 slot.addEventListener('click', function() {
                     if (!this.classList.contains('disabled')) {
                         timeSlots.forEach(s => s.classList.remove('selected'));
                         this.classList.add('selected');
                         
-                        // حفظ وقت الحجز
+                        // Save booking time
                         bookingData.time = this.textContent;
                         updateSummary();
                     }
                 });
             });
             
-            // التنقل بين الأشهر
+            // Month navigation
             prevMonthBtn.addEventListener('click', function() {
                 currentMonth--;
                 if (currentMonth < 0) {
@@ -1216,11 +1216,11 @@
                 renderCalendar();
             });
             
-            // إرسال النموذج
+            // Form submission
             bookingForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // جمع البيانات (بما فيها الموقع المضاف)
+                // Collect data (including location)
                 bookingData.customer = {
                     name: document.getElementById('full-name').value,
                     phone: document.getElementById('phone').value,
@@ -1228,65 +1228,65 @@
                     notes: document.getElementById('notes').value
                 };
                 
-                // التحقق من صحة رقم الهاتف (يبدأ بـ 9677)
+                // Validate phone number (starts with 9677)
                 const yemenPhoneRegex = /^(9677|7)\d{8}$/;
                 if (!yemenPhoneRegex.test(bookingData.customer.phone.replace(/\D/g, ''))) {
-                    alert('رقم الهاتف غير صحيح! يجب أن يبدأ بـ 9677 أو 7 ويتكون من 9 أرقام');
+                    alert('Invalid phone number! Must start with 9677 or 7 and be 9 digits');
                     return;
                 }
                 
-                // تنسيق رقم الهاتف للواتساب
+                // Format phone for WhatsApp
                 const whatsappPhone = bookingData.customer.phone.replace(/\D/g, '');
                 const formattedPhone = whatsappPhone.startsWith('7') ? '967' + whatsappPhone : whatsappPhone;
                 
-                // تنسيق الرسالة للواتساب
+                // Format WhatsApp message
                 const message = `
-                    📌 *حجز جديد* 📌
+                    📌 *New Booking* 📌
                     ------------------
-                    *الخدمة:* ${bookingData.service.name}
-                    *السعر:* ${bookingData.service.price} ر.س
-                    *التاريخ:* ${bookingData.date.toLocaleDateString('ar-SA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-                    *الوقت:* ${bookingData.time}
+                    *Service:* ${bookingData.service.name}
+                    *Price:* ${bookingData.service.price} SAR
+                    *Date:* ${bookingData.date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+                    *Time:* ${bookingData.time}
                     ------------------
-                    *معلومات العميل:*
-                    - الاسم: ${bookingData.customer.name}
-                    - الهاتف: ${bookingData.customer.phone}
-                    - الموقع: ${bookingData.customer.address}
+                    *Customer Info:*
+                    - Name: ${bookingData.customer.name}
+                    - Phone: ${bookingData.customer.phone}
+                    - Location: ${bookingData.customer.address}
                     ------------------
-                    *ملاحظات:* ${bookingData.customer.notes || 'لا يوجد'}
+                    *Notes:* ${bookingData.customer.notes || 'None'}
                 `;
                 
-                // إرسال إلى واتساب
+                // Send to WhatsApp
                 const whatsappUrl = `https://wa.me/+31683822221?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
                 
-                // إرسال إلى البريد الإلكتروني
+                // Send to email
                 emailjs.send('service_your_service_id', 'template_your_template_id', {
                     service_name: bookingData.service.name,
                     service_price: bookingData.service.price,
-                    booking_date: bookingData.date.toLocaleDateString('ar-SA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+                    booking_date: bookingData.date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
                     booking_time: bookingData.time,
                     customer_name: bookingData.customer.name,
                     customer_phone: bookingData.customer.phone,
                     customer_address: bookingData.customer.address,
-                    customer_notes: bookingData.customer.notes || 'لا يوجد',
+                    customer_notes: bookingData.customer.notes || 'None',
                     booking_number: generateBookingNumber()
                 }).then(() => {
-                    console.log('تم إرسال البريد الإلكتروني بنجاح!');
+                    console.log('Email sent successfully!');
                 }, (error) => {
-                    console.error('فشل إرسال البريد:', error);
+                    console.error('Failed to send email:', error);
                 });
                 
-                // عرض رقم الحجز
+                // Display booking number
                 document.getElementById('booking-number').textContent = generateBookingNumber();
                 
-                // الانتقال لصفحة التأكيد
+                // Go to confirmation page
                 goToStep(4);
             });
             
-            // حجز جديد
+            // New booking
             newBookingBtn.addEventListener('click', function() {
-                // إعادة تعيين البيانات
+                // Reset data
                 bookingData = {
                     service: null,
                     date: null,
@@ -1299,31 +1299,31 @@
                     }
                 };
                 
-                // إعادة تعيين النموذج
+                // Reset form
                 bookingForm.reset();
                 
-                // إعادة تعيين الخدمات والأوقات المحددة
+                // Reset selected services and times
                 serviceCards.forEach(card => card.classList.remove('selected'));
                 timeSlots.forEach(slot => slot.classList.remove('selected'));
                 
-                // العودة إلى الخطوة الأولى
+                // Go back to step 1
                 goToStep(1);
             });
             
-            // تهيئة التقويم عند التحميل
+            // Initialize calendar on load
             renderCalendar();
             
-            // اختيار أول خدمة افتراضياً
+            // Select first service by default
             if (serviceCards.length > 0) {
                 serviceCards[0].click();
             }
             
-            // اختيار أول وقت متاح افتراضياً
+            // Select first available time by default
             if (timeSlots.length > 0) {
                 timeSlots[0].click();
             }
             
-            // اختيار اليوم الحالي افتراضياً
+            // Select today's date by default
             const todayElement = document.querySelector('.calendar-day.today');
             if (todayElement) {
                 todayElement.click();
