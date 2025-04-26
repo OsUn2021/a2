@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا - شركة تنظيف</title>
+    <title>Contact Us - Cleaning Company</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -44,7 +44,7 @@
             padding: 0 1rem;
         }
 
-        /* تحسينات الهيدر للجوال */
+        /* Header mobile improvements */
         header {
             background: var(--primary);
             color: white;
@@ -76,7 +76,7 @@
             cursor: pointer;
         }
 
-        /* تحسينات العنوان */
+        /* Title improvements */
         .contact-section {
             padding: 2rem 0;
         }
@@ -100,14 +100,14 @@
             border-radius: 2px;
         }
 
-        /* تحسينات الشبكة */
+        /* Grid improvements */
         .contact-grid {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        /* تحسينات النموذج */
+        /* Form improvements */
         .contact-form {
             background: var(--white);
             padding: 1.5rem;
@@ -156,7 +156,7 @@
             min-height: 120px;
         }
 
-        /* تحسينات زر الإرسال */
+        /* Submit button improvements */
         .send-btn {
             width: 100%;
             padding: 1rem;
@@ -179,7 +179,7 @@
             transform: scale(0.98);
         }
 
-        /* تحسينات معلومات الاتصال */
+        /* Contact info improvements */
         .contact-info {
             background: var(--white);
             padding: 1.5rem;
@@ -256,7 +256,7 @@
             transform: scale(0.95);
         }
 
-        /* تحسينات نافذة الخيارات */
+        /* Options window improvements */
         .options-modal {
             display: none;
             position: fixed;
@@ -371,7 +371,7 @@
             transform: scale(0.98);
         }
 
-        /* تحسينات الفوتر */
+        /* Footer improvements */
         footer {
             background: var(--dark);
             color: white;
@@ -409,7 +409,7 @@
             margin-top: 1rem;
         }
 
-        /* تحسينات للشاشات المتوسطة */
+        /* Medium screen improvements */
         @media (min-width: 768px) {
             .page-title {
                 font-size: 2.3rem;
@@ -429,7 +429,7 @@
             }
         }
 
-        /* تحسينات للشاشات الكبيرة */
+        /* Large screen improvements */
         @media (min-width: 992px) {
             .contact-section {
                 padding: 3rem 0;
@@ -450,10 +450,10 @@
     </style>
 </head>
 <body class="contact-page">
-    <!-- الهيدر -->
+    <!-- Header -->
     <header>
         <div class="header-content">
-            <div class="logo">شركة النظافة</div>
+            <div class="logo">Cleaning Company</div>
             <button class="menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -462,16 +462,16 @@
 
     <main class="container">
         <section class="contact-section">
-            <h1 class="page-title" data-aos="fade-down">تواصل معنا</h1>
+            <h1 class="page-title" data-aos="fade-down">Contact Us</h1>
             
             <div class="contact-grid">
                 <form id="contactForm" class="contact-form">
                     <div class="form-group">
-                        <label for="fullName" class="form-label">الاسم الكامل</label>
+                        <label for="fullName" class="form-label">Full Name</label>
                         <input 
                             type="text" 
                             id="fullName"
-                            placeholder="أدخل اسمك الكامل" 
+                            placeholder="Enter your full name" 
                             required
                             class="form-input"
                         >
@@ -479,11 +479,11 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                        <label for="email" class="form-label">Email</label>
                         <input 
                             type="email" 
                             id="email"
-                            placeholder="أدخل بريدك الإلكتروني" 
+                            placeholder="Enter your email" 
                             required
                             class="form-input"
                         >
@@ -491,22 +491,22 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone" class="form-label">رقم الهاتف</label>
+                        <label for="phone" class="form-label">Phone Number</label>
                         <input 
                             type="tel" 
                             id="phone"
-                            placeholder="أدخل رقم هاتفك" 
+                            placeholder="Enter your phone number" 
                             class="form-input"
                         >
                         <i class="fas fa-phone form-icon"></i>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message" class="form-label">الرسالة</label>
+                        <label for="message" class="form-label">Message</label>
                         <textarea 
                             id="message"
                             rows="5" 
-                            placeholder="أدخل رسالتك..." 
+                            placeholder="Enter your message..." 
                             class="form-input"
                         ></textarea>
                         <i class="fas fa-comment-dots form-icon"></i>
@@ -517,7 +517,7 @@
                         id="submitBtn"
                         class="send-btn"
                     >
-                        <span class="btn-text">إرسال الرسالة</span>
+                        <span class="btn-text">Send Message</span>
                         <i class="fas fa-paper-plane btn-icon"></i>
                     </button>
                 </form>
@@ -527,7 +527,7 @@
                         <div class="info-icon__wrapper">
                             <i class="fas fa-phone info-icon"></i>
                         </div>
-                        <h4 class="info-title">اتصل بنا</h4>
+                        <h4 class="info-title">Call Us</h4>
                         <a href="tel:+31683822221" class="info-link">
                             +31683822221
                         </a>
@@ -537,7 +537,7 @@
                         <div class="info-icon__wrapper">
                             <i class="fab fa-whatsapp info-icon"></i>
                         </div>
-                        <h4 class="info-title">واتساب</h4>
+                        <h4 class="info-title">WhatsApp</h4>
                         <a 
                             href="https://wa.me/31683822221" 
                             class="info-link"
@@ -551,7 +551,7 @@
                         <div class="info-icon__wrapper">
                             <i class="fas fa-envelope info-icon"></i>
                         </div>
-                        <h4 class="info-title">البريد الإلكتروني</h4>
+                        <h4 class="info-title">Email</h4>
                         <a href="mailto:info@cleaning.com" class="info-link">
                             info@cleaning.com
                         </a>
@@ -561,12 +561,12 @@
                         <div class="info-icon__wrapper">
                             <i class="fas fa-map-marker-alt info-icon"></i>
                         </div>
-                        <h4 class="info-title">العنوان</h4>
+                        <h4 class="info-title">Address</h4>
                         <p class="info-text">
-                            الرياض، المملكة العربية السعودية
+                            Riyadh, Saudi Arabia
                             <button class="map-btn">
                                 <i class="fas fa-map"></i>
-                                عرض الخريطة
+                                View Map
                             </button>
                         </p>
                     </div>
@@ -575,36 +575,36 @@
         </section>
     </main>
 
-    <!-- نافذة خيارات الإرسال -->
+    <!-- Send Options Modal -->
     <div id="optionsModal" class="options-modal">
         <div class="modal-content">
-            <h3 class="modal-title">اختر طريقة الإرسال</h3>
+            <h3 class="modal-title">Choose Sending Method</h3>
             
             <button id="whatsappBtn" class="option-btn whatsapp-btn">
                 <i class="fab fa-whatsapp"></i>
-                <span>إرسال عبر واتساب</span>
+                <span>Send via WhatsApp</span>
             </button>
             
             <button id="smsBtn" class="option-btn sms-btn">
                 <i class="fas fa-sms"></i>
-                <span>إرسال رسالة نصية</span>
+                <span>Send SMS</span>
             </button>
             
             <button id="emailBtn" class="option-btn email-btn">
                 <i class="fas fa-envelope"></i>
-                <span>إرسال عبر البريد</span>
+                <span>Send via Email</span>
             </button>
             
             <button id="closeModal" class="close-modal">
-                إغلاق
+                Close
             </button>
         </div>
     </div>
 
-    <!-- الفوتر -->
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="logo">شركة النظافة المثالية</div>
+            <div class="logo">Ideal Cleaning Company</div>
             
             <div class="footer-links">
                 <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i></a>
@@ -613,19 +613,19 @@
                 <a href="#" class="footer-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
             
-            <p class="copyright">جميع الحقوق محفوظة &copy; 2023</p>
+            <p class="copyright">All rights reserved &copy; 2023</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // تهيئة تأثيرات الحركة
+        // Initialize animation effects
         AOS.init({
             duration: 600,
             once: true
         });
         
-        // متغيرات النموذج
+        // Form variables
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const optionsModal = document.getElementById('optionsModal');
@@ -634,26 +634,26 @@
         const smsBtn = document.getElementById('smsBtn');
         const emailBtn = document.getElementById('emailBtn');
         
-        // فتح نافذة الخيارات عند النقر على إرسال
+        // Open options window when clicking send
         submitBtn.addEventListener('click', function() {
-            // التحقق من صحة النموذج
+            // Validate form
             if (contactForm.checkValidity()) {
                 optionsModal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
             } else {
-                // إذا كان النموذج غير صالح، عرض رسالة خطأ
-                alert('الرجاء ملء جميع الحقول المطلوبة');
+                // If form is invalid, show error message
+                alert('Please fill all required fields');
                 contactForm.reportValidity();
             }
         });
         
-        // إغلاق النافذة
+        // Close window
         closeModal.addEventListener('click', function() {
             optionsModal.style.display = 'none';
             document.body.style.overflow = 'auto';
         });
         
-        // إرسال عبر واتساب
+        // Send via WhatsApp
         whatsappBtn.addEventListener('click', function() {
             const name = document.getElementById('fullName').value;
             const email = document.getElementById('email').value;
@@ -661,12 +661,12 @@
             const message = document.getElementById('message').value;
             
             const whatsappMessage = `
-                *رسالة جديدة من موقع شركة النظافة*
+                *New Message from Cleaning Company Website*
                 
-                *الاسم:* ${name}
-                *البريد الإلكتروني:* ${email}
-                *رقم الهاتف:* ${phone}
-                *الرسالة:*
+                *Name:* ${name}
+                *Email:* ${email}
+                *Phone:* ${phone}
+                *Message:*
                 ${message}
             `;
             
@@ -678,16 +678,16 @@
             contactForm.reset();
         });
         
-        // إرسال رسالة نصية
+        // Send SMS
         smsBtn.addEventListener('click', function() {
             const name = document.getElementById('fullName').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
             
             const smsBody = `
-                رسالة جديدة من ${name}
+                New message from ${name}
                 ${message}
-                للرد: ${phone}
+                For reply: ${phone}
             `;
             
             window.open(`sms:+31683822221?body=${encodeURIComponent(smsBody)}`, '_blank');
@@ -697,24 +697,24 @@
             contactForm.reset();
         });
         
-        // إرسال عبر البريد الإلكتروني
+        // Send via Email
         emailBtn.addEventListener('click', function() {
             const name = document.getElementById('fullName').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
             
-            const subject = `رسالة جديدة من ${name} - موقع شركة النظافة`;
+            const subject = `New message from ${name} - Cleaning Company Website`;
             const emailBody = `
-                اسم العميل: ${name}
-                البريد الإلكتروني: ${email}
-                رقم الهاتف: ${phone}
+                Customer Name: ${name}
+                Email: ${email}
+                Phone: ${phone}
                 
-                الرسالة:
+                Message:
                 ${message}
                 
                 ---
-                هذه الرسالة مرسلة من نموذج الاتصال في موقع شركة النظافة
+                This message was sent from the contact form on Cleaning Company website
             `;
             
             window.open(`mailto:2025ooss@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`);
@@ -724,7 +724,7 @@
             contactForm.reset();
         });
         
-        // إغلاق النافذة عند النقر خارجها
+        // Close window when clicking outside
         window.addEventListener('click', function(event) {
             if (event.target === optionsModal) {
                 optionsModal.style.display = 'none';
