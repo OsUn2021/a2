@@ -299,44 +299,55 @@
     });
     </script>
     <!-- Hero Section with Effects -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Cleanliness that reflects <span class="hero-highlight">perfection</span></h1>
-                <p class="hero-subtitle">Comprehensive cleaning services with global standards</p>
-                <div class="hero-cta">
+<!-- Hero Section with Effects -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Cleanliness that reflects <span class="hero-highlight" style="color: #FFC857;">perfection</span></h1>
+            <p class="hero-subtitle">Comprehensive cleaning services with global standards</p>
+            <div class="hero-cta">
                 <a href="services.html" class="cta-button">Services</a>
                 <a href="booking.html" class="cta-button">Book Now</a>
-                <a href="contact.html" class="cta-button">Contact Us</a>            </div>
+                <a href="contact.html" class="cta-button">Contact Us</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <style>
-    .hero {
-        position: relative;
-        min-height: 80vh;
-        background: 
-            linear-gradient(rgba(42, 92, 130, 0.7), 
-            rgba(42, 92, 130, 0.7)),
-            url('assets/images/hero-bg2.jpg') center/cover fixed;
-        display: flex;
-        align-items: center;
-    }
+<style>
+.hero {
+    position: relative;
+    min-height: 80vh;
+    background: 
+        linear-gradient(rgba(42, 92, 130, 0.7), 
+        rgba(42, 92, 130, 0.7)),
+        url('assets/images/hero-bg2.jpg') center/cover fixed;
+    display: flex;
+    align-items: center;
+}
 
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        color: white;
-        text-align: center;
-    }
-        .hero {
-        min-height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-    }
-    </style>
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
 
+.hero-highlight {
+    color: #FFC857; /* اللون الأصفر المطلوب */
+    /* يمكنك استخدام أي من هذه الخيارات:
+    color: var(--secondary);
+    color: #FFD700; (ذهبي)
+    color: yellow; (أصفر أساسي)
+    */
+}
+
+.hero {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+</style>
     <!-- Other Sections with data-aos added -->
     <section class="features section--light" aria-label="Our Features">
         <h2 class="section-title" data-aos="fade-up">Excellence in Details</h2>
