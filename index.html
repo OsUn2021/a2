@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- ========== Advanced SEO Optimizations ========== -->
-        <title>SchoonmaakProMax | Professional Cleaning Company in Netherlands | Competitive Prices</title>
-        <meta name="description" content="SchoonmaakProMax offers home and office cleaning services in Netherlands with European quality standards. Trained team - Eco-friendly materials - Competitive prices. Contact us now!">
-        <meta name="keywords" content="Cleaning company Netherlands, House cleaning Amsterdam, Carpet cleaning Rotterdam, Office disinfection The Hague, Apartment cleaning Utrecht">
+        <title>SchoonmaakProMax | Professioneel Schoonmaakbedrijf in Nederland | Concurrentieprijzen</title>
+        <meta name="description" content="SchoonmaakProMax biedt schoonmaakdiensten voor huis en kantoor in Nederland met Europese kwaliteitsnormen. Opgeleid team - Milieuvriendelijke materialen - Scherpe prijzen. Neem nu contact op!">
+        <meta name="keywords" content="Schoonmaakbedrijf Nederland, Huishoudelijke schoonmaak Amsterdam, Tapijtreiniging Rotterdam, Kantoorontsmetting Den Haag, Appartementen schoonmaken Utrecht">
         <meta name="author" content="SchoonmaakProMax">
         <meta name="robots" content="index, follow">
         <meta name="language" content="Arabic">
         
         <!-- ========== Open Graph / Social Meta ========== -->
-        <meta property="og:title" content="SchoonmaakProMax | Professional Cleaning in Netherlands">
-        <meta property="og:description" content="Comprehensive cleaning services for homes and offices with European quality standards">
+        <meta property="og:title" content="SchoonmaakProMax | Professionele Schoonmaak in Nederland">
+        <meta property="og:description" content="Uitgebreide schoonmaakdiensten voor woningen en kantoren volgens Europese kwaliteitsnormen">
         <meta property="og:image" content="https://osun2021.github.io/a2/assets/images/og-image.jpg">
         <meta property="og:url" content="https://osun2021.github.io/a2/">
         <meta property="og:type" content="website">
@@ -23,8 +23,8 @@
         
         <!-- ========== Twitter Meta ========== -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="SchoonmaakProMax - Professional Cleaning">
-        <meta name="twitter:description" content="Comprehensive cleaning solutions in Netherlands">
+        <meta name="twitter:title" content="SchoonmaakProMax - Professionele Schoonmaak">
+        <meta name="twitter:description" content="Complete schoonmaakoplossingen in Nederland">
         <meta name="twitter:image" content="https://osun2021.github.io/a2/assets/images/og-image.jpg">
         
         <!-- ========== Favicon ========== -->
@@ -58,13 +58,13 @@
             "@type": "ProfessionalService",
             "name": "SchoonmaakProMax",
             "image": "https://osun2021.github.io/a2/assets/images/logo1.jpg",
-            "description": "Professional cleaning company in Netherlands",
+            "description": "Professioneel schoonmaakbedrijf in Nederland",
             "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "NL"
             },
             "telephone": "+31683822221",
-            "openingHours": "Mo-Fr 08:00-18:00",
+            "openingHours": "Ma-Vr 08:00-18:00",
             "url": "https://osun2021.github.io/a2/"
         }
         </script>
@@ -114,29 +114,33 @@
             <a href="index.html" class="logo">
                 <img src="assets/images/logo1.png" alt="SchoonmaakProMax" loading="lazy" width="180" height="60">
             </a>
-            
-            <button class="hamburger-menu" aria-expanded="false" aria-label="Mobile menu">
+
+            <button class="hamburger-menu" aria-expanded="false" aria-label="Mobiel menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
             
-            <nav class="main-nav" aria-label="Main navigation">
+            <nav class="main-nav" aria-label="Hoofdnavigatie">
+                <div class="language-switcher">
+                    <a href="../index.html" class="lang-link">Nederlands</a>
+                    <a href="index.html" class="lang-link">Engels</a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link active" data-link="home">Home</a></li>
-                    <li><a href="services.html" class="nav-link" data-link="services">Services</a></li>
-                    <li><a href="about.html" class="nav-link" data-link="about">About Us</a></li>
-                    <li><a href="contact.html" class="nav-link" data-link="contact">Contact Us</a></li>
+                    <li><a href="services.html" class="nav-link" data-link="services">Diensten</a></li>
+                    <li><a href="about.html" class="nav-link" data-link="about">Over Ons</a></li>
+                    <li><a href="contact.html" class="nav-link" data-link="contact">Contact</a></li>
                     <li class="mobile-only">
                         <a href="tel:+31683822221" class="cta-button mobile-cta">
-                            <i class="fas fa-phone"></i> Call Now
+                            <i class="fas fa-phone"></i> Bel Nu
                         </a>
                     </li>
                 </ul>
             </nav>
             
             <a href="tel:+31683822221" class="desktop-cta cta-button">
-                <i class="fas fa-phone"></i> Contact Us
+                <i class="fas fa-phone"></i> Neem Contact Op
             </a>
         </div>
     </header>
@@ -273,6 +277,29 @@
             transform: translateY(-8px) rotate(-45deg);
         }
     }
+    /* Taalschakelaar */
+.language-switcher {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.lang-link {
+    background: #f5f5f5;
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.lang-link:hover {
+    background: #007bff;
+    color: white;
+}
     </style>
     
     <script>
@@ -284,11 +311,11 @@
             this.classList.toggle('active');
             nav.classList.toggle('active');
             
-            // Add or remove body scroll when menu is open
+            // Voeg body scroll toe of verwijder wanneer menu open is
             document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         });
         
-        // Close menu when clicking any link
+        // Sluit menu wanneer een link wordt geklikt
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -298,17 +325,17 @@
         });
     });
     </script>
+
     <!-- Hero Section with Effects -->
-<!-- Hero Section with Effects -->
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>Cleanliness that reflects <span class="hero-highlight" style="color: #FFC857;">perfection</span></h1>
-            <p class="hero-subtitle">Comprehensive cleaning services with global standards</p>
+            <h1>Reinheid die <span class="hero-highlight" style="color: #FFC857;">perfectie</span> weerspiegelt</h1>
+            <p class="hero-subtitle">Uitgebreide schoonmaakdiensten volgens internationale normen</p>
             <div class="hero-cta">
-                <a href="services.html" class="cta-button">Services</a>
-                <a href="booking.html" class="cta-button">Book Now</a>
-                <a href="contact.html" class="cta-button">Contact Us</a>
+                <a href="services.html" class="cta-button">Diensten</a>
+                <a href="booking.html" class="cta-button">Nu Boeken</a>
+                <a href="contact.html" class="cta-button">Contact</a>
             </div>
         </div>
     </div>
@@ -334,12 +361,7 @@
 }
 
 .hero-highlight {
-    color: #FFC857; /* اللون الأصفر المطلوب */
-    /* يمكنك استخدام أي من هذه الخيارات:
-    color: var(--secondary);
-    color: #FFD700; (ذهبي)
-    color: yellow; (أصفر أساسي)
-    */
+    color: #FFC857;
 }
 
 .hero {
@@ -348,22 +370,22 @@
     overflow: hidden;
 }
 </style>
+
     <!-- Other Sections with data-aos added -->
-    <section class="features section--light" aria-label="Our Features">
-        <h2 class="section-title" data-aos="fade-up">Excellence in Details</h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We provide services that exceed your expectations with global standards</p>
+    <section class="features section--light" aria-label="Onze Kenmerken">
+        <h2 class="section-title" data-aos="fade-up">Perfectie in Details</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Wij leveren diensten die uw verwachtingen overtreffen met internationale standaarden</p>
         
         <div class="container">
-
             <div class="features-grid">
                 <!-- Feature Card 1 -->
                 <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="feature-icon__wrapper">
                         <i class="fas fa-shield-alt feature-icon"></i>
                     </div>
-                    <h3>Quality Guarantee</h3>
-                    <p>Money back guarantee if you're not 100% satisfied</p>
-                    <div class="feature-badge"> Guaranteed</div>
+                    <h3>Kwaliteitsgarantie</h3>
+                    <p>Geld-terug-garantie als u niet 100% tevreden bent</p>
+                    <div class="feature-badge"> Gegarandeerd</div>
                 </div>
                 
                 <!-- Feature Card 2 -->
@@ -372,7 +394,7 @@
                         <i class="fas fa-clock feature-icon"></i>
                     </div>
                     <h3>24/7 Service</h3>
-                    <p>Technical support available around the clock</p>
+                    <p>Technische ondersteuning beschikbaar rond de klok</p>
                 </div>
                 
                 <!-- Feature Card 3 -->
@@ -380,8 +402,8 @@
                     <div class="feature-icon__wrapper">
                         <i class="fas fa-certificate feature-icon"></i>
                     </div>
-                    <h3>Certified</h3>
-                    <p>Trained and certified team from top global institutions</p>
+                    <h3>Gecertificeerd</h3>
+                    <p>Opgeleid en gecertificeerd team van topinstellingen</p>
                 </div>
             </div>
         </div>
@@ -530,9 +552,9 @@
     </style>
 
     <!-- Featured Services Section -->
-<section class="featured-services" aria-label="Featured Services">
-     <h2 class="section-title">✨ Our Excellent Services</h2>
-     <p class="section-subtitle">Comprehensive cleaning solutions for all your needs</p>
+<section class="featured-services" aria-label="Uitgelichte Diensten">
+     <h2 class="section-title">✨ Onze Uitstekende Diensten</h2>
+     <p class="section-subtitle">Complete schoonmaakoplossingen voor al uw behoeften</p>
 
     <div class="container">
         <div class="section-header" data-aos="fade-up">
@@ -541,25 +563,25 @@
         <div class="services-grid">
             <!-- Service 1 -->
             <article class="service-card" data-aos="zoom-in" data-aos-delay="300">
-                <div class="service-badge">Most Requested</div>
+                <div class="service-badge">Meest Gevraagd</div>
                 <div class="service-image">
-                    <img src="assets/images/home-cleaning.jpg" alt="House cleaning" loading="lazy">
+                    <img src="assets/images/home-cleaning.jpg" alt="Huis schoonmaken" loading="lazy">
                     <div class="service-overlay"></div>
                 </div>
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>House Cleaning</h3>
+                    <h3>Huishoudelijke Schoonmaak</h3>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Comprehensive cleaning of all rooms</li>
-                        <li><i class="fas fa-check"></i> Surface disinfection</li>
-                        <li><i class="fas fa-check"></i> Eco-friendly materials</li>
+                        <li><i class="fas fa-check"></i> Complete reiniging van alle kamers</li>
+                        <li><i class="fas fa-check"></i> Oppervlakte desinfectie</li>
+                        <li><i class="fas fa-check"></i> Milieuvriendelijke materialen</li>
                     </ul>
                     <div class="service-footer">
                         <div class="price-box">
                             <span class="price">249</span>
-                            <span class="duration">/ session</span>
+                            <span class="duration">/ sessie</span>
                         </div>
                         <a href="#" class="cta-button">
                             <span></span>
@@ -571,25 +593,25 @@
     
             <!-- Service 2 -->
             <article class="service-card" data-aos="zoom-in" data-aos-delay="400">
-                <div class="service-badge">Special Offer</div>
+                <div class="service-badge">Speciale Aanbieding</div>
                 <div class="service-image">
-                    <img src="assets/images/office-cleaning.jpg" alt="Office cleaning" loading="lazy">
+                    <img src="assets/images/office-cleaning.jpg" alt="Kantoor schoonmaken" loading="lazy">
                     <div class="service-overlay"></div>
                 </div>
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3>Office Cleaning</h3>
+                    <h3>Kantoorreiniging</h3>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Daily/Weekly cleaning</li>
-                        <li><i class="fas fa-check"></i> Floor maintenance</li>
+                        <li><i class="fas fa-check"></i> Dagelijkse/Wekelijkse schoonmaak</li>
+                        <li><i class="fas fa-check"></i> Vloeronderhoud</li>
                         <li><i class="fas fa-check"></i> 24/7 service</li>
                     </ul>
                     <div class="service-footer">
                         <div class="price-box">
                             <span class="price">179</span>
-                            <span class="duration">/ monthly</span>
+                            <span class="duration">/ maandelijks</span>
                         </div>
                         <a href="#" class="cta-button">
                             <span></span>
@@ -602,23 +624,23 @@
             <!-- Service 3 -->
             <article class="service-card" data-aos="zoom-in" data-aos-delay="500">
                 <div class="service-image">
-                    <img src="assets/images/deep-cleaning.jpg" alt="Deep cleaning" loading="lazy">
+                    <img src="assets/images/deep-cleaning.jpg" alt="Diepe reiniging" loading="lazy">
                     <div class="service-overlay"></div>
                 </div>
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fas fa-broom"></i>
                     </div>
-                    <h3>Deep Cleaning</h3>
+                    <h3>Diepe Reiniging</h3>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Tough stain removal</li>
-                        <li><i class="fas fa-check"></i> Carpet cleaning</li>
-                        <li><i class="fas fa-check"></i> 48-hour guarantee</li>
+                        <li><i class="fas fa-check"></i> Verwijdering van hardnekkige vlekken</li>
+                        <li><i class="fas fa-check"></i> Tapijtreiniging</li>
+                        <li><i class="fas fa-check"></i> 48-uur garantie</li>
                     </ul>
                     <div class="service-footer">
                         <div class="price-box">
                             <span class="price">399</span>
-                            <span class="duration">/ including materials</span>
+                            <span class="duration">/ inclusief materialen</span>
                         </div>
                         <a href="#" class="cta-button">
                             <span></span>
@@ -630,10 +652,7 @@
         </div>
     </div>
 </section>
-<!-- Featured Services Section -->
 
-
-<!-- Custom Styles -->
 <style>
 .featured-services {
     padding: 6rem 0;
@@ -704,9 +723,9 @@
 </style>
 
     <!-- Testimonials Section -->
-<section class="testimonials section--light" aria-label="Customer Testimonials">
-     <h2 class="section-title">📣 Customer Testimonials</h2>
-     <p class="section-subtitle">The trust we've earned from thousands of customers</p>
+<section class="testimonials section--light" aria-label="Klantenbeoordelingen">
+     <h2 class="section-title">📣 Klantenbeoordelingen</h2>
+     <p class="section-subtitle">Het vertrouwen dat we hebben verdiend van duizenden klanten</p>
 
     <div class="container">
         <div class="section-header" data-aos="fade-up">
@@ -716,10 +735,10 @@
             <!-- Testimonial 1 -->
             <article class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="client-meta">
-                    <img src="assets/images/client1.jpg" alt="Client Ahmed" class="client-avatar" loading="lazy">
+                    <img src="assets/images/client1.jpg" alt="Klant Ahmed" class="client-avatar" loading="lazy">
                     <div class="client-info">
                         <h4>Ahmed Al-Sayed</h4>
-                        <span>Customer since 2022</span>
+                        <span>Klant sinds 2022</span>
                     </div>
                 </div>
                 <div class="testimonial-body">
@@ -727,7 +746,7 @@
                         <i class="fas fa-quote-right"></i>
                     </div>
                     <blockquote>
-                        "The best cleaning experience I've had! Punctuality and attention to small details"
+                        "De beste schoonmaakervaring die ik ooit heb gehad! Stiptheid en aandacht voor details"
                     </blockquote>
                     <div class="rating-stars">
                         <i class="fas fa-star"></i>
@@ -742,10 +761,10 @@
             <!-- Testimonial 2 -->
             <article class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
                 <div class="client-meta">
-                    <img src="assets/images/client2.jpg" alt="Client Maryam" class="client-avatar" loading="lazy">
+                    <img src="assets/images/client2.jpg" alt="Klant Maryam" class="client-avatar" loading="lazy">
                     <div class="client-info">
                         <h4>Maryam Abdullah</h4>
-                        <span>Customer since 2023</span>
+                        <span>Klant sinds 2023</span>
                     </div>
                 </div>
                 <div class="testimonial-body">
@@ -753,7 +772,7 @@
                         <i class="fas fa-quote-right"></i>
                     </div>
                     <blockquote>
-                        "Very professional team and prices suitable for the quality provided, I recommend them to everyone"
+                        "Zeer professioneel team en prijzen die passen bij de kwaliteit, ik raad ze aan bij iedereen"
                     </blockquote>
                     <div class="rating-stars">
                         <i class="fas fa-star"></i>
@@ -768,10 +787,10 @@
             <!-- Testimonial 3 -->
             <article class="testimonial-card" data-aos="zoom-in" data-aos-delay="400">
                 <div class="client-meta">
-                    <img src="assets/images/client3.jpg" alt="Client Khaled" class="client-avatar" loading="lazy">
+                    <img src="assets/images/client3.jpg" alt="Klant Khaled" class="client-avatar" loading="lazy">
                     <div class="client-info">
                         <h4>Khaled Mohamed</h4>
-                        <span>Customer since 2021</span>
+                        <span>Klant sinds 2021</span>
                     </div>
                 </div>
                 <div class="testimonial-body">
@@ -779,7 +798,7 @@
                         <i class="fas fa-quote-right"></i>
                     </div>
                     <blockquote>
-                        "Results exceeded expectations, especially in carpet and furniture cleaning"
+                        "Resultaten overtroffen verwachtingen, vooral bij tapijt- en meubelreiniging"
                     </blockquote>
                     <div class="rating-stars">
                         <i class="fas fa-star"></i>
@@ -794,7 +813,6 @@
     </div>
 </section>
 
-<!-- Custom Testimonial Styles -->
 <style>
 .testimonials {
     padding: 6rem 0;
@@ -860,6 +878,7 @@ blockquote {
     margin-top: 3rem;
 }
 </style>
+
     <!-- Footer -->
     <footer class="main-footer">
         <!-- Animated Footer Wave -->
@@ -876,15 +895,15 @@ blockquote {
                 <!-- Company Information -->
                 <div class="footer-col" data-aos="fade-up">
                     <div class="footer-brand">
-                        <img src="assets/images/logo-light.png" alt="Company Logo" class="footer-logo" loading="lazy">
+                        <img src="assets/images/logo-light.png" alt="Bedrijfslogo" class="footer-logo" loading="lazy">
                         <p class="footer-description">
-                            Professional cleaning company with global quality standards
+                            Professioneel schoonmaakbedrijf met internationale kwaliteitsnormen
                         </p>
                     </div>
                     <div class="footer-contact">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Amsterdam, Netherlands</span>
+                            <span>Amsterdam, Nederland</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone-alt"></i>
@@ -899,30 +918,30 @@ blockquote {
     
                 <!-- Quick Links -->
                 <div class="footer-col" data-aos="fade-up" data-aos-delay="150">
-                    <h4 class="footer-title">Quick Links</h4>
+                    <h4 class="footer-title">Snelle Links</h4>
                     <ul class="footer-links">
                         <li>
                             <a href="about.html">
                                 <i class="fas fa-chevron-left"></i>
-                                <span>About Us</span>
+                                <span>Over Ons</span>
                             </a>
                         </li>
                         <li>
                             <a href="services.html">
                                 <i class="fas fa-chevron-left"></i>
-                                <span>Services</span>
+                                <span>Diensten</span>
                             </a>
                         </li>
                         <li>
                             <a href="contact.html">
                                 <i class="fas fa-chevron-left"></i>
-                                <span>Contact Us</span>
+                                <span>Contact</span>
                             </a>
                         </li>
                         <li>
                             <a href="privacy.html">
                                 <i class="fas fa-chevron-left"></i>
-                                <span>Privacy Policy</span>
+                                <span>Privacybeleid</span>
                             </a>
                         </li>
                     </ul>
@@ -930,7 +949,7 @@ blockquote {
     
                 <!-- Social Media -->
                 <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
-                    <h4 class="footer-title">Connect With Us</h4>
+                    <h4 class="footer-title">Volg Ons</h4>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook" class="social-link">
                             <i class="fab fa-facebook-f"></i>
@@ -949,30 +968,26 @@ blockquote {
                     <!-- Newsletter Form -->
                     <form class="newsletter-form">
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" placeholder="Uw E-mail" required>
                             <button type="submit" class="newsletter-btn">
                                 <i class="fas fa-paper-plane"></i>
-                                <span>Subscribe</span>
+                                <span>Inschrijven</span>
                             </button>
                         </div>
                     </form>
                 </div>
             
-                        <div class="copyright" data-aos="fade-up">
-                <div class="copyright-content">
-                    <p>&copy; <span id="year"></span> SchoonmaakProMax. All rights reserved</p>
-                    <div class="payment-methods">
-                        <i class="fab fa-cc-visa" title="Visa"></i>
-                        <i class="fab fa-cc-mastercard" title="Mastercard"></i>
-                        <i class="fab fa-cc-paypal" title="PayPal"></i>
+                <div class="copyright" data-aos="fade-up">
+                    <div class="copyright-content">
+                        <p>&copy; <span id="year"></span> SchoonmaakProMax. Alle rechten voorbehouden</p>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                            <i class="fab fa-cc-paypal" title="PayPal"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            </div>
-    
-            <!-- Copyright -->
-
         </div>
     </footer>
     
@@ -1289,7 +1304,7 @@ blockquote {
     </style>
     
     <script>
-    // Automatically update copyright year
+    // Update copyright year automatically
     document.getElementById('year').textContent = new Date().getFullYear();
     
     // AOS effects for elements
@@ -1310,6 +1325,5 @@ blockquote {
             header.classList.toggle('scrolled', window.scrollY > 100);
         });
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
