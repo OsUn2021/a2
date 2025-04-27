@@ -122,6 +122,10 @@
             </button>
             
             <nav class="main-nav" aria-label="Main navigation">
+                <div class="language-switcher">
+                    <a href="../index.html" class="lang-link">Dutch</a>
+                    <a href="index.html" class="lang-link">English</a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link active" data-link="home">Home</a></li>
                     <li><a href="services.html" class="nav-link" data-link="services">Services</a></li>
@@ -273,6 +277,29 @@
             transform: translateY(-8px) rotate(-45deg);
         }
     }
+    /* لغة التبديل */
+.language-switcher {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.lang-link {
+    background: #f5f5f5;
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.lang-link:hover {
+    background: #007bff;
+    color: white;
+}
     </style>
     
     <script>
