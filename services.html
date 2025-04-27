@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Booking - Ideal Cleaning Company | Professional Institutional Cleaning</title>
-    <meta name="description" content="Book professional cleaning services for schools, hotels, restaurants, and institutions. Trained team with modern equipment and approved cleaning materials.">
+    <title>Service Boeking - SchoonmaakProMax | Professionele Schoonmaakdiensten</title>
+    <meta name="description" content="Boek professionele schoonmaakdiensten voor scholen, hotels, restaurants en instellingen. Opgeleid team met moderne apparatuur en goedgekeurde schoonmaakmiddelen.">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -94,6 +94,7 @@
             font-size: 1.1rem;
             max-width: 700px;
             margin: 0 auto;
+            text-align: center;
         }
 
         /* Service cards improvements */
@@ -168,6 +169,7 @@
             margin: 1rem 0;
             font-size: 1.5rem;
             font-weight: 700;
+            text-align: center;
         }
 
         .service-description {
@@ -175,31 +177,39 @@
             font-size: 1rem;
             margin-bottom: 1.5rem;
             min-height: 60px;
+            text-align: center;
         }
-
         .service-features {
             list-style: none;
             padding: 0;
             margin: 1.5rem 0;
-            text-align: right;
+            text-align: center;
         }
-
+        
         .service-features li {
             padding: 0.5rem 0;
             font-size: 0.95rem;
             position: relative;
-            padding-right: 1.5rem;
+            display: flex; /* استخدام flexbox لمحاذاة المحتوى */
+            align-items: center; /* توسيط عمودي */
+            justify-content: center; /* توسيط أفقي */
+            text-align: right;
+            padding-right: 25px;
         }
-
+        
         .service-features li::before {
             content: "\f00c";
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             color: var(--secondary);
-            position: absolute;
-            right: 0;
+            margin-left: 25px; /* إزاحة علامة الصح إلى اليسار */
+            margin-right: 5px; /* مسافة بين العلامة والنص */
+            font-size: 1.2rem; /* حجم العلامة */
+            position: absolute; /* استخدام absolute لتحديد موضع العلامة */
+            left: 0; /* محاذاة العلامة إلى اليسار */
+            top: 50%; /* محاذاة العلامة في المنتصف عموديًا */
+            transform: translateY(-50%); /* محاذاة العلامة في المنتصف عموديًا */
         }
-
         .service-price {
             background: linear-gradient(to right, var(--primary), var(--primary-dark));
             color: var(--white);
@@ -210,6 +220,7 @@
             font-size: 1.2rem;
             margin: 1rem 0;
             box-shadow: 0 4px 15px rgba(42, 92, 130, 0.2);
+            text-align: center;
         }
 
         .service-duration {
@@ -220,6 +231,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+            text-align: center;
         }
 
         .service-duration i {
@@ -240,6 +252,7 @@
             font-size: 1rem;
             margin-top: 1rem;
             box-shadow: 0 4px 15px rgba(255, 200, 87, 0.3);
+            text-align: center;
         }
 
         .btn:hover {
@@ -320,6 +333,7 @@
         .quality-item {
             flex: 1;
             min-width: 200px;
+            text-align: center;
         }
 
         .quality-item i {
@@ -396,99 +410,99 @@
     <section class="booking-section">
         <div class="container">
             <div class="section-header animate__animated animate__fadeIn">
-                <h1 class="section-title">Professional Cleaning Services</h1>
-                <p class="section-subtitle">We provide comprehensive cleaning solutions for institutions meeting global quality standards, using the latest technologies and a highly trained team</p>
+                <h1 class="section-title">Professionele Schoonmaakdiensten</h1>
+                <p class="section-subtitle">Wij bieden complete schoonmaakoplossingen voor instellingen volgens internationale kwaliteitsnormen, met de nieuwste technologieën en een hoogopgeleid team</p>
             </div>
 
             <div class="services-grid">
                 <!-- School Cleaning -->
                 <div class="service-card animate__animated animate__fadeInUp animate-delay-1">
-                    <span class="service-badge">Most Popular</span>
+                    <span class="service-badge">Meest Populair</span>
                     <i class="fas fa-school service-icon"></i>
-                    <h3 class="service-title">School Cleaning</h3>
+                    <h3 class="service-title">Schoolreiniging</h3>
                     <p class="service-description">
-                        Comprehensive cleaning solutions for schools including classrooms, labs, hallways, and sanitary facilities with approved disinfectants
+                        Complete schoonmaakoplossingen voor scholen inclusief klaslokalen, laboratoria, gangen en sanitaire voorzieningen met goedgekeurde ontsmettingsmiddelen
                     </p>
                     <ul class="service-features">
-                        <li>Daily disinfection of surfaces and tables</li>
-                        <li>Removal of graffiti and stickers</li>
-                        <li>Cleaning of outdoor areas</li>
-                        <li>Floor treatment and polishing</li>
-                        <li>Safe waste disposal</li>
+                        <li>Dagelijkse desinfectie van oppervlakken en tafels</li>
+                        <li>Verwijdering van graffiti en stickers</li>
+                        <li>Reiniging van buitenruimtes</li>
+                        <li>Vloerbehandeling en polijsten</li>
+                        <li>Veilige afvalverwijdering</li>
                     </ul>
                     <div class="service-price"> 0 </div>
                     <div class="service-duration">
-                        <i class="far fa-clock"></i> Service Duration: 4-6 hours
+                        <i class="far fa-clock"></i> Dienstduur: 4-6 uur
                     </div>
-                    <a href="booking.html" class="btn btn-block">Book Now</a>
+                    <a href="booking.html" class="btn btn-block">Nu Boeken</a>
                 </div>
 
                 <!-- Hotel Cleaning -->
                 <div class="service-card animate__animated animate__fadeInUp animate-delay-2">
                     <i class="fas fa-hotel service-icon"></i>
-                    <h3 class="service-title">Hotel Cleaning</h3>
+                    <h3 class="service-title">Hotelreiniging</h3>
                     <p class="service-description">
-                        Comprehensive hotel cleaning services for guest rooms, restaurants, lobbies and public areas according to global hospitality standards
+                        Complete hotelschoonmaakdiensten voor gastenkamers, restaurants, lobby's en openbare ruimtes volgens internationale hospitalitynormen
                     </p>
                     <ul class="service-features">
-                        <li>Cleaning and polishing furniture</li>
-                        <li>Daily bathroom disinfection</li>
-                        <li>Floor and mirror polishing</li>
-                        <li>Hotel kitchen cleaning</li>
-                        <li>Attention to fine details</li>
+                        <li>Reiniging en polijsten van meubels</li>
+                        <li>Dagelijkse badkamerdesinfectie</li>
+                        <li>Vloer- en spiegelpolijsten</li>
+                        <li>Hotelkeukenreiniging</li>
+                        <li>Aandacht voor fijne details</li>
                     </ul>
                     <div class="service-price"> 0 </div>
                     <div class="service-duration">
-                        <i class="far fa-clock"></i> Service Duration: 6-8 hours
+                        <i class="far fa-clock"></i> Dienstduur: 6-8 uur
                     </div>
-                    <a href="booking.html" class="btn btn-block">Book Now</a>
+                    <a href="booking.html" class="btn btn-block">Nu Boeken</a>
                 </div>
 
                 <!-- Restaurant Cleaning -->
                 <div class="service-card animate__animated animate__fadeInUp animate-delay-3">
                     <i class="fas fa-utensils service-icon"></i>
-                    <h3 class="service-title">Restaurant Cleaning</h3>
+                    <h3 class="service-title">Restaurantreiniging</h3>
                     <p class="service-description">
-                        Specialized cleaning solutions for restaurants including kitchens, preparation areas, dining halls meeting the highest hygiene standards
+                        Gespecialiseerde schoonmaakoplossingen voor restaurants inclusief keukens, bereidingsruimtes, eetzalen volgens de hoogste hygiënenormen
                     </p>
                     <ul class="service-features">
-                        <li>Grease and fat removal</li>
-                        <li>Disinfection of preparation surfaces</li>
-                        <li>Cleaning refrigerators and freezers</li>
-                        <li>Ventilation system sanitation</li>
-                        <li>Storage cabinet cleaning</li>
+                        <li>Verwijdering van vet en olie</li>
+                        <li>Desinfectie van bereidingsoppervlakken</li>
+                        <li>Reiniging van koelkasten en vriezers</li>
+                        <li>Sanering van ventilatiesystemen</li>
+                        <li>Reiniging van opbergkasten</li>
                     </ul>
                     <div class="service-price"> 0 </div>
                     <div class="service-duration">
-                        <i class="far fa-clock"></i> Service Duration: 5-7 hours
+                        <i class="far fa-clock"></i> Dienstduur: 5-7 uur
                     </div>
-                    
+                    <a href="booking.html" class="btn btn-block">Nu Boeken</a>
                 </div>
             </div>
 
             <!-- Quality Guarantee Section -->
             <div class="quality-guarantee animate__animated animate__fadeIn">
-                <h3 class="quality-title">Why Choose Our Services?</h3>
+                <h3 class="quality-title">Waarom Onze Diensten Kiezen?</h3>
                 <div class="quality-items">
                     <div class="quality-item">
                         <i class="fas fa-shield-alt"></i>
-                        <h4>Quality Guarantee</h4>
-                        <p>We guarantee complete satisfaction or money back</p>
+                        <h4>Kwaliteitsgarantie</h4>
+                        <p>Wij garanderen volledige tevredenheid of geld terug</p>
                     </div>
                     <div class="quality-item">
                         <i class="fas fa-users"></i>
-                        <h4>Trained Team</h4>
-                        <p>Professional team trained in latest cleaning methods</p>
+                        <h4>Opgeleid Team</h4>
+                        <p>Professioneel team opgeleid in nieuwste schoonmaakmethoden</p>
                     </div>
                     <div class="quality-item">
                         <i class="fas fa-leaf"></i>
-                        <h4>Eco-Friendly Materials</h4>
-                        <p>Use of safe, environmentally approved cleaning materials</p>
+                        <h4>Milieuvriendelijke Materialen</h4>
+                        <p>Gebruik van veilige, milieuvriendelijke schoonmaakmiddelen</p>
                     </div>
                     <div class="quality-item">
                         <i class="fas fa-headset"></i>
-                        <h4>24/7 Technical Support</h4>
-                        <p>Available to serve you around the clock</p>
+                        <h4>24/7 Technische Ondersteuning</h4>
+                        <p>Altijd beschikbaar om u te helpen</p>
                     </div>
                 </div>
             </div>
@@ -525,7 +539,7 @@
                     }, 1000);
                     
                     // Here you can add the actual booking function
-                    alert('Thank you for choosing our service! You will be redirected to the booking page.');
+                    alert('Bedankt voor het kiezen van onze dienst! U wordt doorgestuurd naar de boekingspagina.');
                 });
             });
         });
