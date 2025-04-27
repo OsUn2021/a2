@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://osun2021.github.io/a2/sitemap.xml

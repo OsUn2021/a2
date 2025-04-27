@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us - Cleaning Company</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A5C82;
+            --secondary: #FFC857;
+            --dark: #1A2E40;
+            --light: #F8F9FA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: var(--light);
+            overflow-x: hidden;
+            text-align: right;
+        }
+
+        /* Mobile performance improvements */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Main section improvements */
+        .about-section {
+            padding: 2.5rem 1rem;
+        }
+
+        .about-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .about-image {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            min-height: 250px;
+            object-fit: cover;
+        }
+
+        .about-content {
+            padding: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 0.8rem 0;
+        }
+
+        .highlight-text {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 1.8rem;
+            line-height: 1.7;
+        }
+
+        /* Mobile company features improvements */
+        .advantages {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .advantage-item {
+            background: var(--white);
+            padding: 1.2rem;
+            border-radius: 0.8rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .advantage-item i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .advantage-item span {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Mobile CTA button improvements */
+        .cta-button {
+            background: linear-gradient(45deg, var(--primary), var(--dark));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border: none;
+            box-shadow: 0 4px 10px rgba(42, 92, 130, 0.2);
+        }
+
+        .cta-button i {
+            font-size: 0.9rem;
+        }
+
+        /* Mobile stats section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            padding: 2.5rem 1rem;
+            color: white;
+            margin: 2.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-number span {
+            font-size: 1.2rem;
+            margin-right: 3px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Mobile team section */
+        .team-section {
+            padding: 2.5rem 1rem;
+            background-color: var(--white);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .member-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .member-info {
+            padding: 1.5rem 1rem;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .member-position {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .member-bio {
+            color: #666;
+            margin-bottom: 1.2rem;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .social-links a {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile clients section */
+        .clients-section {
+            padding: 2.5rem 1rem;
+            background-color: var(--light);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .client-logo {
+            padding: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 0.5rem;
+            height: 80px;
+        }
+
+        .client-logo img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        /* Very small screen improvements */
+        @media (max-width: 400px) {
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .clients-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Medium screen improvements (larger than 576px) */
+        @media (min-width: 576px) {
+            .about-section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .advantages {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Tablet improvements (larger than 768px) */
+        @media (min-width: 768px) {
+            .about-section {
+                padding: 4rem 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Light motion effects for mobile */
+        @media (prefers-reduced-motion: no-preference) {
+            [data-aos] {
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+            
+            [data-aos="fade-up"] {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            
+            [data-aos="fade-up"].aos-animate {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Touch improvements */
+        button, a {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        .advantage-item:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="about-page">
+    <!-- Light mobile header -->
+    <header style="background: var(--primary); color: white; padding: 1rem; position: sticky; top: 0; z-index: 100;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 700; font-size: 1.2rem;">Cleaning Company</div>
+            <button id="menuBtn" style="background: none; border: none; color: white; font-size: 1.5rem;">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-up">
+                    <img src="assets/images/about-team-mobile.jpg" alt="Cleaning company team" loading="lazy">
+                </div>
+
+                <div class="about-content">
+                    <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">About Us</h1>
+                    <p class="highlight-text" data-aos="fade-up" data-aos-delay="150">10+ years of professional cleaning experience</p>
+                    <p class="description" data-aos="fade-up" data-aos-delay="200">We are a team of trained professionals in the latest cleaning techniques, providing our services with the highest quality standards using innovative and environmentally friendly materials.</p>
+                    
+                    <div class="advantages">
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="250">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quality Guarantee</span>
+                        </div>
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Service</span>
+                        </div>
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="350">
+                            <i class="fas fa-award"></i>
+                            <span>Certified</span>
+                        </div>
+                        <div class="advantage-item" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fas fa-leaf"></i>
+                            <span>Eco-Friendly Materials</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;" data-aos="fade-up" data-aos-delay="450">
+                        <a href="tel:+31683822221" class="cta-button">
+                            <span>Call Us Now</span>
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section" data-aos="fade-up">
+            <h2 style="color: white; text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem;">Our Numbers Speak For Us</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">Satisfied Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Customer Service</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2 class="section-title" data-aos="fade-up">Our Professional Team</h2>
+            <p class="description" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">Our dedicated team is the secret to our excellence and client satisfaction</p>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image">
+                        <img src="assets/images/team1-mobile.jpg" alt="Operations Manager" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Ahmed Mohamed</h3>
+                        <span class="member-position">Operations Manager</span>
+                        <p class="member-bio">12 years experience managing professional cleaning teams and ensuring service quality.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-image">
+                        <img src="assets/images/team2-mobile.jpg" alt="Quality Manager" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Sarah Abdullah</h3>
+                        <span class="member-position">Quality Manager</span>
+                        <p class="member-bio">Specialized in international cleaning standards and ensuring safe material usage.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients-section">
+            <h2 class="section-title" data-aos="fade-up">Our Clients</h2>
+            <p class="description" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">We're proud of the trust of many companies and institutions</p>
+            
+            <div class="clients-grid">
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/client1.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="250">
+                    <img src="assets/images/client2.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/client3.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="350">
+                    <img src="assets/images/client4.png" alt="Client logo" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Light mobile footer -->
+    <footer style="background: var(--dark); color: white; padding: 2rem 1rem; text-align: center;">
+        <p style="margin-bottom: 1rem;">Ideal Cleaning Company © 2023</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+            <a href="tel:+31683822221" style="color: white; text-decoration: none;"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/31683822221" style="color: white; text-decoration: none;"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:info@cleaning.com" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="font-size: 0.9rem; opacity: 0.8;">All rights reserved</p>
+    </footer>
+
+    <script>
+        // Light motion effects without external libraries
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('[data-aos]');
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.classList.add('aos-animate');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+            
+            // Mobile menu button
+            const menuBtn = document.getElementById('menuBtn');
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function() {
+                    alert('Menu will open here in the actual application');
+                });
+            }
+            
+            // Lazy loading images for better performance
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                    }
+                });
+            }
+        });
+        
+        // Track call button clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'Contact',
+                        'event_label': 'Mobile Call Button'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
