@@ -179,37 +179,30 @@
             min-height: 60px;
             text-align: center;
         }
+
         .service-features {
             list-style: none;
             padding: 0;
             margin: 1.5rem 0;
             text-align: center;
         }
-        
+
         .service-features li {
             padding: 0.5rem 0;
             font-size: 0.95rem;
             position: relative;
-            display: flex; /* استخدام flexbox لمحاذاة المحتوى */
-            align-items: center; /* توسيط عمودي */
-            justify-content: center; /* توسيط أفقي */
-            text-align: right;
-            padding-right: 25px;
+            text-align: center;
         }
-        
+
         .service-features li::before {
             content: "\f00c";
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             color: var(--secondary);
-            margin-left: 25px; /* إزاحة علامة الصح إلى اليسار */
-            margin-right: 5px; /* مسافة بين العلامة والنص */
-            font-size: 1.2rem; /* حجم العلامة */
-            position: absolute; /* استخدام absolute لتحديد موضع العلامة */
-            left: 0; /* محاذاة العلامة إلى اليسار */
-            top: 50%; /* محاذاة العلامة في المنتصف عموديًا */
-            transform: translateY(-50%); /* محاذاة العلامة في المنتصف عموديًا */
+            position: absolute;
+            right: -20px;
         }
+
         .service-price {
             background: linear-gradient(to right, var(--primary), var(--primary-dark));
             color: var(--white);
