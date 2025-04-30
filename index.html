@@ -7,6 +7,8 @@
     
     <!-- ========== Advanced SEO Optimizations ========== -->
     <title>SchoonmaakProMax | Professioneel Schoonmaakbedrijf in Nederland | Concurrentieprijzen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <meta name="description" content="SchoonmaakProMax biedt schoonmaakdiensten voor huis en kantoor in Nederland met Europese kwaliteitsnormen. Opgeleid team - Milieuvriendelijke materialen - Scherpe prijzen. Neem nu contact op!">
     <meta name="keywords" content="Schoonmaakbedrijf Nederland, Huishoudelijke schoonmaak Amsterdam, Tapijtreiniging Rotterdam, Kantoorontsmetting Den Haag, Appartementen schoonmaken Utrecht">
     <meta name="author" content="SchoonmaakProMax">
@@ -57,7 +59,7 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "SchoonmaakProMax",
-        "image": "https://osun2021.github.io/a2/assets/images/logo3.jpg",
+        "image": "https://osun2021.github.io/a2/assets/images/logo4.jpg",
         "description": "Professioneel schoonmaakbedrijf in Nederland",
         "address": {
             "@type": "PostalAddress",
@@ -79,6 +81,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         
         html, body {
@@ -112,7 +119,7 @@
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo3.png" alt="SchoonmaakProMax" loading="lazy">
+                <img src="assets/images/logo4.png" alt="SchoonmaakProMax" loading="lazy">
             </a>
 
             <button class="hamburger-menu" aria-expanded="false" aria-label="Mobiel menu">
@@ -147,8 +154,9 @@
     :root {
         --primary: #2A5C82;
         --secondary: #FFC857;
+        --accent: #39e653;
+        --light: #F8F9FA;
         --text: #333;
-        --light-bg: #f8f9fa;
     }
     
     .main-header {
@@ -870,10 +878,10 @@
         height: 80px;
         background: rgba(42, 92, 130, 0.1);
         border-radius: 50%;
+        margin: 0 auto 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 1.5rem;
         transition: all 0.3s ease;
     }
     
@@ -1043,7 +1051,6 @@
         overflow: hidden;
         box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        position: relative;
     }
 
     .service-card:hover {
@@ -1525,7 +1532,7 @@
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1554,13 +1561,13 @@
         padding: 1rem;
         border-radius: 50px;
         border: none;
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
         color: white;
         padding-right: 120px;
     }
     
     .newsletter-form input::placeholder {
-        color: rgba(255,255,255,0.7);
+        color: rgba(255, 255, 255, 0.7);
     }
     
     .newsletter-form input:focus {
@@ -1591,7 +1598,7 @@
     }
     
     .copyright {
-        border-top: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding: 2rem 0;
         margin-top: 2rem;
     }
